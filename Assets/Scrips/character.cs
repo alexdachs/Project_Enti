@@ -11,15 +11,16 @@ public class character : MonoBehaviour
 
 
     public float dashDistance = 10.0f;
-    bool isDashing;
+    private bool isDashing;
     public float dashCoolDown = 0.5f;
+    private bool goingLeft = false;
 
     public float speed = 4.0f;
     public float jumpPower = 10.0f;
     public int extraJumps = 1;
 
     private bool changeGravity = false;
-    public float gravityForce = 5.0f;
+    private bool stayTop = false;
 
     private bool isJumping = false;
     private bool isGrounded;
@@ -43,7 +44,7 @@ public class character : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-                StartCoroutine(Dash(1f));
+            StartCoroutine(Dash(1f));
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -67,7 +68,14 @@ public class character : MonoBehaviour
     {
         if (!isJumping)
         {
-            player.velocity = new Vector2(player.velocity.x, jumpPower);
+            if (stayTop)
+            {
+                player.velocity = new Vector2(player.velocity.x, -jumpPower);
+            }
+            else
+            {
+                player.velocity = new Vector2(player.velocity.x, jumpPower);
+            } 
             isJumping = true;
         }  
     }
@@ -83,19 +91,16 @@ public class character : MonoBehaviour
         {
             speed = -1 * speed;
             isJumping = false;
-        }
-    }
+            if (goingLeft)
+            {
+                goingLeft = false;
+            }
+            else
+            {
+                goingLeft = true;
+            }
 
-    IEnumerator Dash(float direction)
-    {
-        isDashing = true;
-        player.velocity = new Vector2(player.velocity.x, 0f);
-        player.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
-        float gravity = player.gravityScale;
-        player.gravityScale = 0;
-        yield return new WaitForSeconds(0.4f);
-        isDashing = false;
-        player.gravityScale = gravity;
+        }
     }
 
 
@@ -107,12 +112,42 @@ public class character : MonoBehaviour
         }
     }
 
+    IEnumerator Dash(float direction)
+    {
+        isDashing = true;
+        player.velocity = new Vector2(player.velocity.x, 0f);
+
+        if (!goingLeft)
+        {
+            player.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
+        }
+        else
+        {
+            player.AddForce(new Vector2(-dashDistance * direction, 0f), ForceMode2D.Impulse);
+        }
+        float gravity = player.gravityScale;
+        player.gravityScale = 0;
+        yield return new WaitForSeconds(0.4f);
+        isDashing = false;
+        player.gravityScale = gravity;
+    }
+
+
+
     private void GravityChange()
     {
         if (!changeGravity)
         {
             player.gravityScale = -1 * player.gravityScale;
             changeGravity = true;
+        }
+        if (stayTop)
+        {
+            stayTop = false;
+        }
+        else
+        {
+            stayTop = true;
         }
     }
 
