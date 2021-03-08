@@ -5,11 +5,20 @@ using UnityEngine;
 public class character : MonoBehaviour
 {
     private Rigidbody2D player;
+    public GameObject feet;
+    public GameObject lateral_D;
+    public GameObject lateral_I;
+
+
+    public float dashDistance = 10.0f;
+    bool isDashing;
+    public float dashCoolDown = 0.5f;
+
     public float speed = 4.0f;
     public float jumpPower = 10.0f;
     public int extraJumps = 1;
 
-   
+    private bool isJumping = false;
     private bool isGrounded;
     private float jumpCoolDown;
     private int jumpCount = 0;
@@ -29,38 +38,66 @@ public class character : MonoBehaviour
             Jump();        
         }
 
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+                StartCoroutine(Dash(1f));
+        }
+
         //CheckGrounded();
     }
 
     private void FixedUpdate()
     {
-        player.velocity = new Vector2(speed, player.velocity.y); // Movimiento constante
+        if (!isDashing)
+        {
+            player.velocity = new Vector2(speed, player.velocity.y); // Movimiento constante
+        }
+         
     }
 
     void Jump()
     {
-        if (isGrounded || jumpCount < extraJumps)
+        if (!isJumping)
         {
             player.velocity = new Vector2(player.velocity.x, jumpPower);
-            jumpCount++;
+            isJumping = true;
         }  
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D (Collider2D col)
     {
         if (col.CompareTag("floor"))
         {
-            isGrounded = true;
+            isJumping = false;
+        }
+        if (col.CompareTag("wall") && isJumping) 
+        {
+            speed = -1 * speed;
+            isJumping = false;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D col)
+    IEnumerator Dash(float direction)
+    {
+        isDashing = true;
+        player.velocity = new Vector2(player.velocity.x, 0f);
+        player.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
+        float gravity = player.gravityScale;
+        player.gravityScale = 0;
+        yield return new WaitForSeconds(0.4f);
+        isDashing = false;
+        player.gravityScale = gravity;
+    }
+
+
+    private void OnTriggerExit2D (Collider2D col)
     {
         if (col.CompareTag("floor"))
         {
-            isGrounded = false;
+            isJumping = true;
         }
     }
+
 
     /* void CheckGrounded() // Funcion check del salto (si toca el suelo puede saltar y resetea el contador)
      {
