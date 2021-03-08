@@ -18,6 +18,9 @@ public class character : MonoBehaviour
     public float jumpPower = 10.0f;
     public int extraJumps = 1;
 
+    private bool changeGravity = false;
+    public float gravityForce = 5.0f;
+
     private bool isJumping = false;
     private bool isGrounded;
     private float jumpCoolDown;
@@ -43,6 +46,11 @@ public class character : MonoBehaviour
                 StartCoroutine(Dash(1f));
         }
 
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            GravityChange();
+        }
+
         //CheckGrounded();
     }
 
@@ -64,13 +72,14 @@ public class character : MonoBehaviour
         }  
     }
 
-    private void OnTriggerEnter2D (Collider2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.CompareTag("floor"))
+        if (col.gameObject.tag == "floor")
         {
             isJumping = false;
+            changeGravity = false;
         }
-        if (col.CompareTag("wall") && isJumping) 
+        if (col.gameObject.tag == "wall" && isJumping) 
         {
             speed = -1 * speed;
             isJumping = false;
@@ -90,11 +99,20 @@ public class character : MonoBehaviour
     }
 
 
-    private void OnTriggerExit2D (Collider2D col)
+    private void OnCollisionExit2D(Collision2D col)
     {
-        if (col.CompareTag("floor"))
+        if (col.gameObject.tag == "floor")
         {
             isJumping = true;
+        }
+    }
+
+    private void GravityChange()
+    {
+        if (!changeGravity)
+        {
+            player.gravityScale = -1 * player.gravityScale;
+            changeGravity = true;
         }
     }
 
