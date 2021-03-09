@@ -5,10 +5,9 @@ using UnityEngine;
 public class character : MonoBehaviour
 {
     private Rigidbody2D player;
-    public GameObject feet;
-    public GameObject lateral_D;
-    public GameObject lateral_I;
+    public GameObject checkpoint;
 
+    public float cont = 0;
 
     public float dashDistance = 10.0f;
     private bool isDashing;
@@ -20,10 +19,11 @@ public class character : MonoBehaviour
     public int extraJumps = 1;
 
     private bool changeGravity = false;
+    private float gravityForce = 5.0f;
     private bool stayTop = false;
 
     private bool isJumping = false;
-    private bool isGrounded;
+    private bool isStacked;
     private float jumpCoolDown;
     private int jumpCount = 0;
     
@@ -37,19 +37,41 @@ public class character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown ("Jump"))
+        if (Input.GetButtonDown ("Jump")) // Salto
         {
             Jump();        
         }
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D)) // Dash
         {
             StartCoroutine(Dash(1f));
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.W)) // Cambio Gravedad
         {
             GravityChange();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S) && !isJumping) // Encogerse
+        {
+            player.transform.localScale = new Vector3(1, 0.65f, 1);
+        }
+        if (Input.GetKeyUp(KeyCode.S)) // Volver al tamaño normal
+        {
+            player.transform.localScale = new Vector3(1, 1, 1);
+        }
+        if (Input.GetKeyUp(KeyCode.R)) // Reset
+        {
+            player.transform.position = new Vector3(checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z);
+            player.gravityScale = gravityForce;
+            changeGravity = false;
+            stayTop = false;
+            isJumping = false;
+        }
+
+        if (player.transform.position == player.transform.position)
+        {
+            cont = cont * Time.deltaTime;
         }
 
         //CheckGrounded();
@@ -59,22 +81,46 @@ public class character : MonoBehaviour
     {
         if (!isDashing)
         {
-            player.velocity = new Vector2(speed, player.velocity.y); // Movimiento constante
-        }
-         
+            if (isStacked)
+            {
+                player.velocity = new Vector2(0f, player.velocity.y);
+            }
+            else
+            {
+                player.velocity = new Vector2(speed, player.velocity.y); // Movimiento constante
+            }
+        }   
     }
 
     void Jump()
     {
         if (!isJumping)
         {
-            if (stayTop)
+            if (stayTop) // Salto estando en el techo
             {
-                player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                if (isStacked) // Si esta stacked
+                {
+                    player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                    cont = 0;
+                }
+                else
+                {
+                    player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                }
+                
             }
-            else
+            else // Salto normal
             {
-                player.velocity = new Vector2(player.velocity.x, jumpPower);
+                if (isStacked)
+                {
+                    player.velocity = new Vector2(player.velocity.x, jumpPower);
+                    cont = 0;
+                }
+                else
+                {
+                    player.velocity = new Vector2(player.velocity.x, jumpPower);
+                }
+                
             } 
             isJumping = true;
         }  
@@ -82,16 +128,17 @@ public class character : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "floor")
+        if (col.gameObject.tag == "floor") // Reinicio del salto
         {
             isJumping = false;
             changeGravity = false;
         }
-        if (col.gameObject.tag == "wall" && isJumping) 
+        if (col.gameObject.tag == "wall" && isJumping) //Rebote con la pared
         {
+
             speed = -1 * speed;
             isJumping = false;
-            if (goingLeft)
+            if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
             {
                 goingLeft = false;
             }
@@ -101,27 +148,48 @@ public class character : MonoBehaviour
             }
 
         }
+        if (col.gameObject.tag == "wall" && cont >= 2)
+        {
+            isStacked = true;
+        }
+        if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
+        {
+            player.transform.position = new Vector3(checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z);
+            player.gravityScale = gravityForce;
+            changeGravity = false;
+            stayTop = false;
+            isJumping = false;
+        }
     }
-
 
     private void OnCollisionExit2D(Collision2D col)
     {
-        if (col.gameObject.tag == "floor")
+        if (col.gameObject.tag == "floor") // Esta saltando (para no poder spamear el salto)
         {
             isJumping = true;
         }
     }
+
+   /* private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("wall") && cont >= 2000)
+        {
+            cont = 0;
+            isStacked = true;
+        }
+    }*/
+
 
     IEnumerator Dash(float direction)
     {
         isDashing = true;
         player.velocity = new Vector2(player.velocity.x, 0f);
 
-        if (!goingLeft)
+        if (!goingLeft) // Dash si vas hacia la derecha
         {
             player.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
         }
-        else
+        else // Dash si vas hacia la izquierda
         {
             player.AddForce(new Vector2(-dashDistance * direction, 0f), ForceMode2D.Impulse);
         }
@@ -132,8 +200,6 @@ public class character : MonoBehaviour
         player.gravityScale = gravity;
     }
 
-
-
     private void GravityChange()
     {
         if (!changeGravity)
@@ -141,7 +207,7 @@ public class character : MonoBehaviour
             player.gravityScale = -1 * player.gravityScale;
             changeGravity = true;
         }
-        if (stayTop)
+        if (stayTop) // Cambio de variable de si estamos arriba o abajo para modificar el salto
         {
             stayTop = false;
         }
@@ -151,22 +217,4 @@ public class character : MonoBehaviour
         }
     }
 
-
-    /* void CheckGrounded() // Funcion check del salto (si toca el suelo puede saltar y resetea el contador)
-     {
-         if () // Check de los alrededores del jugador con el suelo
-         {
-             isGrounded = true;
-             jumpCount = 0; 
-             jumpCoolDown = Time.time + 0.2f;
-         }
-         else if (Time.time < jumpCoolDown) // Check del cooldown del salto
-         {
-             isGrounded = true;
-         }
-         else
-         {
-             isGrounded = false;
-         }
-     }*/
 }

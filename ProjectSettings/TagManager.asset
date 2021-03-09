@@ -9,6 +9,8 @@ TagManager:
   - lateral
   - floor
   - wall
+  - trap
+  - checkpoint
   layers:
   - Default
   - TransparentFX
