@@ -8,24 +8,27 @@ public class character : MonoBehaviour
     public GameObject checkpoint;
 
     public float cont = 0;
+    public bool notMoving = false;
 
     public float dashDistance = 10.0f;
     private bool isDashing;
     public float dashCoolDown = 0.5f;
     private bool goingLeft = false;
 
+    private const float stop = 0f;
+    private const float move = 4.0f;
     public float speed = 4.0f;
     public float jumpPower = 10.0f;
     public int extraJumps = 1;
+    public bool ground;
 
     private bool changeGravity = false;
     private float gravityForce = 5.0f;
     private bool stayTop = false;
 
-    private bool isJumping = false;
+    public bool isJumping = false;
     private bool isStacked;
     private float jumpCoolDown;
-    private int jumpCount = 0;
     
 
     // Start is called before the first frame update
@@ -67,12 +70,14 @@ public class character : MonoBehaviour
             changeGravity = false;
             stayTop = false;
             isJumping = false;
+            notMoving = false;
+            speed = move;
         }
 
-        if (player.transform.position == player.transform.position)
+       /* if (player.transform.position == player.transform.position)
         {
             cont = cont * Time.deltaTime;
-        }
+        }*/
 
         //CheckGrounded();
     }
@@ -81,9 +86,9 @@ public class character : MonoBehaviour
     {
         if (!isDashing)
         {
-            if (isStacked)
+            if (notMoving)
             {
-                player.velocity = new Vector2(0f, player.velocity.y);
+                player.velocity = new Vector2(speed, player.velocity.y);
             }
             else
             {
@@ -98,6 +103,137 @@ public class character : MonoBehaviour
         {
             if (stayTop) // Salto estando en el techo
             {
+                if (notMoving)
+                {
+                    if (ground)
+                    {
+                        isJumping = true;
+                        if (isStacked) // Si esta stacked
+                        {
+                            player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                            cont = 0;
+                        }
+                        else
+                        {
+                            player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                        }
+                    }
+                    else
+                    {
+                        if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
+                        {
+                            speed = -move;
+                            goingLeft = false;
+                        }
+                        else
+                        {
+                            speed = move;
+                            goingLeft = true;
+                        }
+                        speed = -1 * speed;
+                        player.velocity = new Vector2(speed, player.velocity.y);
+                        notMoving = false;
+                        isJumping = true;
+                        if (isStacked) // Si esta stacked
+                        {
+                            player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                            cont = 0;
+                        }
+                        else
+                        {
+                            player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                        }
+                    }
+                }
+                else
+                {
+                    if (isStacked)
+                    {
+                        player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                        cont = 0;
+                    }
+                    else
+                    {
+                        player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                    }
+                }
+            }
+            else // Salto normal
+            {
+                if (notMoving)
+                {
+                    if (ground)
+                    {
+                        isJumping = true;
+                        if (isStacked)
+                        {
+                            player.velocity = new Vector2(player.velocity.x, jumpPower);
+                            cont = 0;
+                        }
+                        else
+                        {
+                            player.velocity = new Vector2(player.velocity.x, jumpPower);
+                        }
+                    }
+                    else
+                    {
+                        if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
+                        {
+                            speed = -move;
+                            goingLeft = false;
+                        }
+                        else
+                        {
+                            speed = move;
+                            goingLeft = true;
+                        }
+                        speed = -1 * speed;
+                        player.velocity = new Vector2(speed, player.velocity.y);
+                        notMoving = false;
+                        isJumping = true;
+                        if (isStacked)
+                        {
+                            player.velocity = new Vector2(player.velocity.x, jumpPower);
+                            cont = 0;
+                        }
+                        else
+                        {
+                            player.velocity = new Vector2(player.velocity.x, jumpPower);
+                        }
+                    }
+                }
+                else
+                {
+                    if (isStacked)
+                    {
+                        player.velocity = new Vector2(player.velocity.x, jumpPower);
+                        cont = 0;
+                    }
+                    else
+                    {
+                        player.velocity = new Vector2(player.velocity.x, jumpPower);
+                    }
+                }
+            }
+        }
+        else if (isJumping && notMoving)
+        {
+            if (stayTop)
+            {
+                if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
+                {
+                    speed = -move;
+                    goingLeft = false;
+                }
+                else
+                {
+                    speed = move;
+                    goingLeft = true;
+                }
+                speed = -1 * speed;
+                player.velocity = new Vector2(speed, player.velocity.y);
+                notMoving = false;
+                isJumping = true;
                 if (isStacked) // Si esta stacked
                 {
                     player.velocity = new Vector2(player.velocity.x, -jumpPower);
@@ -107,10 +243,23 @@ public class character : MonoBehaviour
                 {
                     player.velocity = new Vector2(player.velocity.x, -jumpPower);
                 }
-                
             }
-            else // Salto normal
+            else
             {
+                if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
+                {
+                    speed = -move;
+                    goingLeft = false;
+                }
+                else
+                {
+                    speed = move;
+                    goingLeft = true;
+                }
+                speed = -1 * speed;
+                player.velocity = new Vector2(speed, player.velocity.y);
+                notMoving = false;
+                isJumping = true;
                 if (isStacked)
                 {
                     player.velocity = new Vector2(player.velocity.x, jumpPower);
@@ -120,9 +269,7 @@ public class character : MonoBehaviour
                 {
                     player.velocity = new Vector2(player.velocity.x, jumpPower);
                 }
-                
-            } 
-            isJumping = true;
+            }
         }  
     }
 
@@ -133,32 +280,32 @@ public class character : MonoBehaviour
             isJumping = false;
             changeGravity = false;
         }
-        if (col.gameObject.tag == "wall" && isJumping) //Rebote con la pared
+        if (col.gameObject.tag == "wall") //Rebote con la pared
         {
-
-            speed = -1 * speed;
+            notMoving = true;
+            speed = stop;
             isJumping = false;
-            if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
-            {
-                goingLeft = false;
-            }
-            else
-            {
-                goingLeft = true;
-            }
-
         }
-        if (col.gameObject.tag == "wall" && cont >= 2)
+        if (col.gameObject.tag == "floor")
+        {
+            ground = true;
+        }
+        /*if (col.gameObject.tag == "wall" && cont >= 2)
         {
             isStacked = true;
-        }
+        }*/
         if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
         {
             player.transform.position = new Vector3(checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z);
+            if (goingLeft)
+            {
+                speed = -1 * speed;
+            }
             player.gravityScale = gravityForce;
             changeGravity = false;
             stayTop = false;
             isJumping = false;
+            speed = move;
         }
     }
 
@@ -167,6 +314,7 @@ public class character : MonoBehaviour
         if (col.gameObject.tag == "floor") // Esta saltando (para no poder spamear el salto)
         {
             isJumping = true;
+            ground = false;
         }
     }
 

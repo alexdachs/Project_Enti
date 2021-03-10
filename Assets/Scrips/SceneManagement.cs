@@ -16,9 +16,9 @@ public class SceneManagement : MonoBehaviour
                 SceneManager.LoadScene("Test_lvl");
             }
         }
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lose"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Test_lvl"))
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.P))
             {
                 SceneManager.LoadScene("Menu");
             }
