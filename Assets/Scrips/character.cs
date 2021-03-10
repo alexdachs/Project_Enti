@@ -305,6 +305,7 @@ public class character : MonoBehaviour
             changeGravity = false;
             stayTop = false;
             isJumping = false;
+            goingLeft = false;
             speed = move;
         }
     }
