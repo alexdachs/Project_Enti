@@ -8,11 +8,13 @@ public class character : MonoBehaviour
 {
     private Rigidbody2D player;
     public GameObject checkpoint;
+    private GameMaster gm;
 
     public bool notMoving = false;
 
     public float dashDistance = 10.0f;
     private bool isDashing;
+    private bool isAttacking;
     public float dashCoolDown = 0.5f;
     private bool goingLeft = false;
 
@@ -35,6 +37,8 @@ public class character : MonoBehaviour
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        transform.position = gm.lastCheckPoint;
     }
 
     // Update is called once per frame
@@ -65,14 +69,8 @@ public class character : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.R)) // Reset
         {
-            SceneManager.LoadScene("Test_lvl");
-            /* player.transform.position = new Vector3(checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z);
-             player.gravityScale = gravityForce;
-             changeGravity = false;
-             stayTop = false;
-             isJumping = false;
-             notMoving = false;
-             speed = move;*/
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene("Test_lvl");
         }
 
         //CheckGrounded();
@@ -80,6 +78,7 @@ public class character : MonoBehaviour
 
     private void FixedUpdate()
     {
+        float delta = Time.deltaTime * 65;
         if (!isDashing)
         {
             if (notMoving)
@@ -88,7 +87,8 @@ public class character : MonoBehaviour
             }
             else
             {
-                player.velocity = new Vector2(speed, player.velocity.y); // Movimiento constante
+                // Poner Time.deltaTime
+                player.velocity = new Vector2(speed * delta, player.velocity.y); // Movimiento constante
             }
         }   
     }
@@ -246,7 +246,7 @@ public class character : MonoBehaviour
 
         if (col.gameObject.tag == "heavy_enemy" || col.gameObject.tag == "soldier_enemy" || col.gameObject.tag == "dron_enemy")
         {
-            if (isDashing)
+            if (isAttacking)
             {
                 Destroy(col.gameObject);
                 isDashing = false;
@@ -254,7 +254,7 @@ public class character : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("Test_lvl");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
             
         }
@@ -274,6 +274,7 @@ public class character : MonoBehaviour
         if (!isDashing)
         {
             isDashing = true;
+            isAttacking = true;
             player.velocity = new Vector2(player.velocity.x, 0f);
 
             if (!goingLeft) // Dash si vas hacia la derecha
@@ -287,6 +288,7 @@ public class character : MonoBehaviour
             float gravity = player.gravityScale;
             player.gravityScale = 0;
             yield return new WaitForSeconds(0.4f);
+            isAttacking = false;
             player.gravityScale = gravity;
         }
         if (isDashing && ground)

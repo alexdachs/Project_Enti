@@ -15,6 +15,7 @@ TagManager:
   - dron_enemy
   - soldier_enemy
   - enemy
+  - GM
   layers:
   - Default
   - TransparentFX
