@@ -11,6 +11,10 @@ TagManager:
   - wall
   - trap
   - checkpoint
+  - heavy_enemy
+  - dron_enemy
+  - soldier_enemy
+  - enemy
   layers:
   - Default
   - TransparentFX

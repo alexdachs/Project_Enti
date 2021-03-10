@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class character : MonoBehaviour
 {
     private Rigidbody2D player;
     public GameObject checkpoint;
 
-    public float cont = 0;
     public bool notMoving = false;
 
     public float dashDistance = 10.0f;
@@ -19,7 +20,6 @@ public class character : MonoBehaviour
     private const float move = 4.0f;
     public float speed = 4.0f;
     public float jumpPower = 10.0f;
-    public int extraJumps = 1;
     public bool ground;
 
     private bool changeGravity = false;
@@ -65,19 +65,15 @@ public class character : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.R)) // Reset
         {
-            player.transform.position = new Vector3(checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z);
-            player.gravityScale = gravityForce;
-            changeGravity = false;
-            stayTop = false;
-            isJumping = false;
-            notMoving = false;
-            speed = move;
+            SceneManager.LoadScene("Test_lvl");
+            /* player.transform.position = new Vector3(checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z);
+             player.gravityScale = gravityForce;
+             changeGravity = false;
+             stayTop = false;
+             isJumping = false;
+             notMoving = false;
+             speed = move;*/
         }
-
-       /* if (player.transform.position == player.transform.position)
-        {
-            cont = cont * Time.deltaTime;
-        }*/
 
         //CheckGrounded();
     }
@@ -108,15 +104,7 @@ public class character : MonoBehaviour
                     if (ground)
                     {
                         isJumping = true;
-                        if (isStacked) // Si esta stacked
-                        {
-                            player.velocity = new Vector2(player.velocity.x, -jumpPower);
-                            cont = 0;
-                        }
-                        else
-                        {
-                            player.velocity = new Vector2(player.velocity.x, -jumpPower);
-                        }
+                        player.velocity = new Vector2(player.velocity.x, -jumpPower);
                     }
                     else
                     {
@@ -134,28 +122,12 @@ public class character : MonoBehaviour
                         player.velocity = new Vector2(speed, player.velocity.y);
                         notMoving = false;
                         isJumping = true;
-                        if (isStacked) // Si esta stacked
-                        {
-                            player.velocity = new Vector2(player.velocity.x, -jumpPower);
-                            cont = 0;
-                        }
-                        else
-                        {
-                            player.velocity = new Vector2(player.velocity.x, -jumpPower);
-                        }
+                        player.velocity = new Vector2(player.velocity.x, -jumpPower);
                     }
                 }
                 else
-                {
-                    if (isStacked)
-                    {
-                        player.velocity = new Vector2(player.velocity.x, -jumpPower);
-                        cont = 0;
-                    }
-                    else
-                    {
-                        player.velocity = new Vector2(player.velocity.x, -jumpPower);
-                    }
+                { 
+                    player.velocity = new Vector2(player.velocity.x, -jumpPower);
                 }
             }
             else // Salto normal
@@ -165,15 +137,7 @@ public class character : MonoBehaviour
                     if (ground)
                     {
                         isJumping = true;
-                        if (isStacked)
-                        {
-                            player.velocity = new Vector2(player.velocity.x, jumpPower);
-                            cont = 0;
-                        }
-                        else
-                        {
-                            player.velocity = new Vector2(player.velocity.x, jumpPower);
-                        }
+                        player.velocity = new Vector2(player.velocity.x, jumpPower);
                     }
                     else
                     {
@@ -191,34 +155,18 @@ public class character : MonoBehaviour
                         player.velocity = new Vector2(speed, player.velocity.y);
                         notMoving = false;
                         isJumping = true;
-                        if (isStacked)
-                        {
-                            player.velocity = new Vector2(player.velocity.x, jumpPower);
-                            cont = 0;
-                        }
-                        else
-                        {
-                            player.velocity = new Vector2(player.velocity.x, jumpPower);
-                        }
+                        player.velocity = new Vector2(player.velocity.x, jumpPower);
                     }
                 }
                 else
                 {
-                    if (isStacked)
-                    {
-                        player.velocity = new Vector2(player.velocity.x, jumpPower);
-                        cont = 0;
-                    }
-                    else
-                    {
-                        player.velocity = new Vector2(player.velocity.x, jumpPower);
-                    }
+                    player.velocity = new Vector2(player.velocity.x, jumpPower);
                 }
             }
         }
-        else if (isJumping && notMoving)
+        else if (isJumping && notMoving) // Si esta stacked
         {
-            if (stayTop)
+            if (stayTop) // En el techo
             {
                 if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
                 {
@@ -234,17 +182,10 @@ public class character : MonoBehaviour
                 player.velocity = new Vector2(speed, player.velocity.y);
                 notMoving = false;
                 isJumping = true;
-                if (isStacked) // Si esta stacked
-                {
-                    player.velocity = new Vector2(player.velocity.x, -jumpPower);
-                    cont = 0;
-                }
-                else
-                {
-                    player.velocity = new Vector2(player.velocity.x, -jumpPower);
-                }
+                player.velocity = new Vector2(player.velocity.x, -jumpPower);
+
             }
-            else
+            else // En el suelo
             {
                 if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
                 {
@@ -260,15 +201,8 @@ public class character : MonoBehaviour
                 player.velocity = new Vector2(speed, player.velocity.y);
                 notMoving = false;
                 isJumping = true;
-                if (isStacked)
-                {
-                    player.velocity = new Vector2(player.velocity.x, jumpPower);
-                    cont = 0;
-                }
-                else
-                {
-                    player.velocity = new Vector2(player.velocity.x, jumpPower);
-                }
+                player.velocity = new Vector2(player.velocity.x, jumpPower);
+
             }
         }  
     }
@@ -277,8 +211,10 @@ public class character : MonoBehaviour
     {
         if (col.gameObject.tag == "floor") // Reinicio del salto
         {
+            isDashing = false;
             isJumping = false;
             changeGravity = false;
+            ground = true;
         }
         if (col.gameObject.tag == "wall") //Rebote con la pared
         {
@@ -286,17 +222,10 @@ public class character : MonoBehaviour
             speed = stop;
             isJumping = false;
         }
-        if (col.gameObject.tag == "floor")
-        {
-            ground = true;
-        }
-        /*if (col.gameObject.tag == "wall" && cont >= 2)
-        {
-            isStacked = true;
-        }*/
         if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
         {
-            player.transform.position = new Vector3(checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z);
+            SceneManager.LoadScene("Test_lvl");
+            /*player.transform.position = new Vector3(checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z);
             if (goingLeft)
             {
                 speed = -1 * speed;
@@ -306,7 +235,28 @@ public class character : MonoBehaviour
             stayTop = false;
             isJumping = false;
             goingLeft = false;
-            speed = move;
+            speed = move;*/
+        }
+        if (col.gameObject.tag == "Finish")
+        {
+            SceneManager.LoadScene("Victory");
+        }
+
+        // ENEMIGOS
+
+        if (col.gameObject.tag == "heavy_enemy" || col.gameObject.tag == "soldier_enemy" || col.gameObject.tag == "dron_enemy")
+        {
+            if (isDashing)
+            {
+                Destroy(col.gameObject);
+                isDashing = false;
+                isJumping = false;
+            }
+            else
+            {
+                SceneManager.LoadScene("Test_lvl");
+            }
+            
         }
     }
 
@@ -319,34 +269,30 @@ public class character : MonoBehaviour
         }
     }
 
-   /* private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("wall") && cont >= 2000)
-        {
-            cont = 0;
-            isStacked = true;
-        }
-    }*/
-
-
     IEnumerator Dash(float direction)
     {
-        isDashing = true;
-        player.velocity = new Vector2(player.velocity.x, 0f);
+        if (!isDashing)
+        {
+            isDashing = true;
+            player.velocity = new Vector2(player.velocity.x, 0f);
 
-        if (!goingLeft) // Dash si vas hacia la derecha
-        {
-            player.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
+            if (!goingLeft) // Dash si vas hacia la derecha
+            {
+                player.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
+            }
+            else // Dash si vas hacia la izquierda
+            {
+                player.AddForce(new Vector2(-dashDistance * direction, 0f), ForceMode2D.Impulse);
+            }
+            float gravity = player.gravityScale;
+            player.gravityScale = 0;
+            yield return new WaitForSeconds(0.4f);
+            player.gravityScale = gravity;
         }
-        else // Dash si vas hacia la izquierda
+        if (isDashing && ground)
         {
-            player.AddForce(new Vector2(-dashDistance * direction, 0f), ForceMode2D.Impulse);
+            isDashing = false;
         }
-        float gravity = player.gravityScale;
-        player.gravityScale = 0;
-        yield return new WaitForSeconds(0.4f);
-        isDashing = false;
-        player.gravityScale = gravity;
     }
 
     private void GravityChange()
