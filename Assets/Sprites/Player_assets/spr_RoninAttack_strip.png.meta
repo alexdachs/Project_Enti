@@ -1,0 +1,1667 @@
+fileFormatVersion: 2
+guid: ce45be7524fc1ae458d886c66917858c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4212579363879606517
+    second: spr_RoninAttack_strip_0
+  - first:
+      213: -2944828393642228511
+    second: spr_RoninAttack_strip_1
+  - first:
+      213: 8267255215133823318
+    second: spr_RoninAttack_strip_2
+  - first:
+      213: 1013680140004090588
+    second: spr_RoninAttack_strip_3
+  - first:
+      213: -6659209927520605748
+    second: spr_RoninAttack_strip_4
+  - first:
+      213: 7857734032481518250
+    second: spr_RoninAttack_strip_5
+  - first:
+      213: -8920321191995620169
+    second: spr_RoninAttack_strip_6
+  - first:
+      213: 3643754537084447930
+    second: spr_RoninAttack_strip_7
+  - first:
+      213: -3585364517135876951
+    second: spr_RoninAttack_strip_8
+  - first:
+      213: -2995328376605264264
+    second: spr_RoninAttack_strip_9
+  - first:
+      213: 4895630054215933263
+    second: spr_RoninAttack_strip_10
+  - first:
+      213: 1021457690031249117
+    second: spr_RoninAttack_strip_11
+  - first:
+      213: 4784795377442244711
+    second: spr_RoninAttack_strip_12
+  - first:
+      213: -5197386408831837333
+    second: spr_RoninAttack_strip_13
+  - first:
+      213: 2106530472136909430
+    second: spr_RoninAttack_strip_14
+  - first:
+      213: 225919858270071237
+    second: spr_RoninAttack_strip_15
+  - first:
+      213: -2003790622508726104
+    second: spr_RoninAttack_strip_16
+  - first:
+      213: -6489953184788819692
+    second: spr_RoninAttack_strip_17
+  - first:
+      213: -4307220074644408938
+    second: spr_RoninAttack_strip_18
+  - first:
+      213: -3865745755557371866
+    second: spr_RoninAttack_strip_19
+  - first:
+      213: -8799625513630540388
+    second: spr_RoninAttack_strip_20
+  - first:
+      213: -9094193882153459670
+    second: spr_RoninAttack_strip_21
+  - first:
+      213: -3328127541403517748
+    second: spr_RoninAttack_strip_22
+  - first:
+      213: -6852186275085996494
+    second: spr_RoninAttack_strip_23
+  - first:
+      213: 8189073233574576149
+    second: spr_RoninAttack_strip_24
+  - first:
+      213: -8504203500383893467
+    second: spr_RoninAttack_strip_25
+  - first:
+      213: 2040893573072242949
+    second: spr_RoninAttack_strip_26
+  - first:
+      213: 8883617718075794589
+    second: spr_RoninAttack_strip_27
+  - first:
+      213: -7531133519159138990
+    second: spr_RoninAttack_strip_28
+  - first:
+      213: 7589325534887395383
+    second: spr_RoninAttack_strip_29
+  - first:
+      213: -5013119460378273752
+    second: spr_RoninAttack_strip_30
+  - first:
+      213: -2206271829180996829
+    second: spr_RoninAttack_strip_31
+  - first:
+      213: 2608753499268921690
+    second: spr_RoninAttack_strip_32
+  - first:
+      213: 6033976970183776812
+    second: spr_RoninAttack_strip_33
+  - first:
+      213: 7702859552942554626
+    second: spr_RoninAttack_strip_34
+  - first:
+      213: -6850950347880859807
+    second: spr_RoninAttack_strip_35
+  - first:
+      213: -5547746519198228111
+    second: spr_RoninAttack_strip_36
+  - first:
+      213: 6312288129255992573
+    second: spr_RoninAttack_strip_37
+  - first:
+      213: 8688100769641785648
+    second: spr_RoninAttack_strip_38
+  - first:
+      213: 8283122018053995862
+    second: spr_RoninAttack_strip_39
+  - first:
+      213: 4761493601493374484
+    second: spr_RoninAttack_strip_40
+  - first:
+      213: -4926492548491301089
+    second: spr_RoninAttack_strip_41
+  - first:
+      213: -6217540554334197288
+    second: spr_RoninAttack_strip_42
+  - first:
+      213: 8957358710435359155
+    second: spr_RoninAttack_strip_0
+  - first:
+      213: -3093364629569620297
+    second: spr_RoninAttack_strip_1
+  - first:
+      213: -4838009277959427627
+    second: spr_RoninAttack_strip_2
+  - first:
+      213: -1208871106530982899
+    second: spr_RoninAttack_strip_3
+  - first:
+      213: -588551681123129684
+    second: spr_RoninAttack_strip_4
+  - first:
+      213: -2996075467654039691
+    second: spr_RoninAttack_strip_5
+  - first:
+      213: 7003266857881864932
+    second: spr_RoninAttack_strip_6
+  - first:
+      213: 5187863598637473783
+    second: spr_RoninAttack_strip_7
+  - first:
+      213: 6854550523052721302
+    second: spr_RoninAttack_strip_8
+  - first:
+      213: 3869401525326214818
+    second: spr_RoninAttack_strip_9
+  - first:
+      213: -7678319265040196350
+    second: spr_RoninAttack_strip_10
+  - first:
+      213: 1865712055715432346
+    second: spr_RoninAttack_strip_11
+  - first:
+      213: 6445470134649510151
+    second: spr_RoninAttack_strip_12
+  - first:
+      213: 3243509602900810864
+    second: spr_RoninAttack_strip_13
+  - first:
+      213: -195925826725534146
+    second: spr_RoninAttack_strip_14
+  - first:
+      213: -94136781487031003
+    second: spr_RoninAttack_strip_15
+  - first:
+      213: 7003347842518678302
+    second: spr_RoninAttack_strip_16
+  - first:
+      213: -4202407864370478162
+    second: spr_RoninAttack_strip_17
+  - first:
+      213: 8502955051489942451
+    second: spr_RoninAttack_strip_18
+  - first:
+      213: -5568044290817969345
+    second: spr_RoninAttack_strip_19
+  - first:
+      213: 1570222859930446030
+    second: spr_RoninAttack_strip_20
+  - first:
+      213: 8783887576160540673
+    second: spr_RoninAttack_strip_21
+  - first:
+      213: 2345748740218012207
+    second: spr_RoninAttack_strip_22
+  - first:
+      213: 5215622827995278549
+    second: spr_RoninAttack_strip_23
+  - first:
+      213: 2120914815936779239
+    second: spr_RoninAttack_strip_24
+  - first:
+      213: 7436784571847998801
+    second: spr_RoninAttack_strip_43
+  - first:
+      213: 8750808105674673801
+    second: spr_RoninAttack_strip_44
+  - first:
+      213: -1563302300184474013
+    second: spr_RoninAttack_strip_45
+  - first:
+      213: -5708828598121489700
+    second: spr_RoninAttack_strip_46
+  - first:
+      213: -1744181706906827773
+    second: spr_RoninAttack_strip_47
+  - first:
+      213: -6448931423662230620
+    second: spr_RoninAttack_strip_48
+  - first:
+      213: -445367986523628898
+    second: spr_RoninAttack_strip_49
+  - first:
+      213: 3508104454203925291
+    second: spr_RoninAttack_strip_50
+  - first:
+      213: 5038238684933466781
+    second: spr_RoninAttack_strip_51
+  - first:
+      213: 1943238810419567963
+    second: spr_RoninAttack_strip_52
+  - first:
+      213: -957823695025407388
+    second: spr_RoninAttack_strip_53
+  - first:
+      213: 8306747117230590776
+    second: spr_RoninAttack_strip_54
+  - first:
+      213: 1410604502751877742
+    second: spr_RoninAttack_strip_55
+  - first:
+      213: -57858613040651986
+    second: spr_RoninAttack_strip_56
+  - first:
+      213: 3011729880957219644
+    second: spr_RoninAttack_strip_57
+  - first:
+      213: 4136649735789515096
+    second: spr_RoninAttack_strip_58
+  - first:
+      213: -4909599356669858599
+    second: spr_RoninAttack_strip_59
+  - first:
+      213: 2829137251722831573
+    second: spr_RoninAttack_strip_60
+  - first:
+      213: 7807453318824601049
+    second: spr_RoninAttack_strip_61
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_0
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 33
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9204df94eee4c70800000000000000
+      internalID: 8957358710435359155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_1
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 33
+        width: 74
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6bebd32492215d0800000000000000
+      internalID: -3093364629569620297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_2
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 33
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d92f2fc130fbdcb0800000000000000
+      internalID: -4838009277959427627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_3
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 67
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04ccfb222a393fe0800000000000000
+      internalID: -1208871106530982899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_4
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 72
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca662b24d5b05d7f0800000000000000
+      internalID: -588551681123129684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_5
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 72
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577f73e6c3dcb66d0800000000000000
+      internalID: -2996075467654039691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_6
+      rect:
+        serializedVersion: 2
+        x: 1948
+        y: 33
+        width: 75
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea80533a1a903160800000000000000
+      internalID: 7003266857881864932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_7
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 33
+        width: 79
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff57fbd47efef740800000000000000
+      internalID: 5187863598637473783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_8
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 72
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694868d3261402f50800000000000000
+      internalID: 6854550523052721302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_9
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 73
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a67c62bf20e2b530800000000000000
+      internalID: 3869401525326214818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_10
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 74
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d9d375f41217590800000000000000
+      internalID: -7678319265040196350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_11
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 33
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97051eca3754e910800000000000000
+      internalID: 1865712055715432346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_12
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 65
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7095c2a10f8e27950800000000000000
+      internalID: 6445470134649510151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_13
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 68
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c987a8cc2430d20800000000000000
+      internalID: 3243509602900810864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_14
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 67
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3623b7af7ee74df0800000000000000
+      internalID: -195925826725534146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_15
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 33
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52dba23981f81bef0800000000000000
+      internalID: -94136781487031003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_16
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 33
+        width: 82
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bf2d7e1c3e03160800000000000000
+      internalID: 7003347842518678302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_17
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 33
+        width: 61
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3c3ea005c0ea5c0800000000000000
+      internalID: -4202407864370478162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_18
+      rect:
+        serializedVersion: 2
+        x: 2249
+        y: 62
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bbdb299190900670800000000000000
+      internalID: 8502955051489942451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_19
+      rect:
+        serializedVersion: 2
+        x: 2337
+        y: 33
+        width: 56
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f333720e7355ab2b0800000000000000
+      internalID: -5568044290817969345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_20
+      rect:
+        serializedVersion: 2
+        x: 2378
+        y: 64
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec82a582f5d8ac510800000000000000
+      internalID: 1570222859930446030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_21
+      rect:
+        serializedVersion: 2
+        x: 2848
+        y: 33
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10814042633a6e970800000000000000
+      internalID: 8783887576160540673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_22
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 33
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22c3090d06cd8020800000000000000
+      internalID: 2345748740218012207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_23
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 58
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dca319145d916840800000000000000
+      internalID: 5215622827995278549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_24
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 33
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e356cab9c00f6d10800000000000000
+      internalID: 2120914815936779239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_25
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 59
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5280cfd39fffaf980800000000000000
+      internalID: -8504203500383893467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_26
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 33
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509495f34e5b25c10800000000000000
+      internalID: 2040893573072242949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_27
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 61
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9426464f33f84b70800000000000000
+      internalID: 8883617718075794589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_28
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 33
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2556b7a47f90c7790800000000000000
+      internalID: -7531133519159138990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_29
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 33
+        width: 60
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730c3cf2d53b25960800000000000000
+      internalID: 7589325534887395383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_30
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 43
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8281e835962dd6ab0800000000000000
+      internalID: -5013119460378273752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_31
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 33
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32327bfe57fb161e0800000000000000
+      internalID: -2206271829180996829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_32
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 51
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a593b7e5c77243420800000000000000
+      internalID: 2608753499268921690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_33
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 33
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a11b2c51efcb350800000000000000
+      internalID: 6033976970183776812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_34
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 58
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e7ddfa3fd06ea60800000000000000
+      internalID: 7702859552942554626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_35
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 54
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167f8bcd4f88ce0a0800000000000000
+      internalID: -6850950347880859807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_36
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 33
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171a74b1fe17203b0800000000000000
+      internalID: -5547746519198228111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_37
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 33
+        width: 37
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfce7301c90c99750800000000000000
+      internalID: 6312288129255992573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_38
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 54
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039eb435e95529870800000000000000
+      internalID: 8688100769641785648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_39
+      rect:
+        serializedVersion: 2
+        x: 2390
+        y: 61
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d335de69f83f270800000000000000
+      internalID: 8283122018053995862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_40
+      rect:
+        serializedVersion: 2
+        x: 2398
+        y: 55
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416de4df339341240800000000000000
+      internalID: 4761493601493374484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_41
+      rect:
+        serializedVersion: 2
+        x: 2465
+        y: 33
+        width: 56
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f219af02591abb0800000000000000
+      internalID: -4926492548491301089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_42
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 61
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9235acecbd6b9a0800000000000000
+      internalID: -6217540554334197288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_43
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 33
+        width: 57
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15dfa149a24c43760800000000000000
+      internalID: 7436784571847998801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_44
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 33
+        width: 53
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e095cbb9d117970800000000000000
+      internalID: 8750808105674673801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_45
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 33
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e04f837d80e4ae0800000000000000
+      internalID: -1563302300184474013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_46
+      rect:
+        serializedVersion: 2
+        x: 3103
+        y: 33
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda906df2aa26c0b0800000000000000
+      internalID: -5708828598121489700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_47
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 51
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30485188afb6bc7e0800000000000000
+      internalID: -1744181706906827773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_48
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 53
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a332cfb90bc086a0800000000000000
+      internalID: -6448931423662230620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_49
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 53
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a9de80d2cb1d9f0800000000000000
+      internalID: -445367986523628898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_50
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 53
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b236ac31a6a4fa030800000000000000
+      internalID: 3508104454203925291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_51
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 56
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a2715e36b6be540800000000000000
+      internalID: 5038238684933466781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_52
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 50
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d9fc00765c7fa10800000000000000
+      internalID: 1943238810419567963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_53
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 44
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46afe849c6025b2f0800000000000000
+      internalID: -957823695025407388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_54
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 50
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b8789fd7e774370800000000000000
+      internalID: 8306747117230590776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_55
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 45
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a97115259739310800000000000000
+      internalID: 1410604502751877742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_56
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 44
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21e382e5e1723ff0800000000000000
+      internalID: -57858613040651986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_57
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 36
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3372e1be50dbc920800000000000000
+      internalID: 3011729880957219644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_58
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 44
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85192fd8405586930800000000000000
+      internalID: 4136649735789515096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_59
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 39
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dce434b5699ddbb0800000000000000
+      internalID: -4909599356669858599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_60
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 36
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6a3cd475d134720800000000000000
+      internalID: 2829137251722831573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninAttack_strip_61
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 39
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d52cf48d65a95c60800000000000000
+      internalID: 7807453318824601049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
