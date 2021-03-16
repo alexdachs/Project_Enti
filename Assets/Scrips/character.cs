@@ -31,6 +31,8 @@ public class character : MonoBehaviour
     public bool isJumping = false;
     private bool isStacked;
     private float jumpCoolDown;
+
+    public bool collectable = false;
     
 
     // Start is called before the first frame update
@@ -240,6 +242,12 @@ public class character : MonoBehaviour
         if (col.gameObject.tag == "Finish")
         {
             SceneManager.LoadScene("Victory");
+        }
+        //COLECCIONABLE
+        if(col.gameObject.tag == "collectable")
+        {
+            collectable = true;
+            Destroy(col.gameObject);
         }
 
         // ENEMIGOS

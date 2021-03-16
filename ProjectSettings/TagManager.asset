@@ -18,6 +18,7 @@ TagManager:
   - GM
   - start
   - projectile
+  - collectable
   layers:
   - Default
   - TransparentFX
