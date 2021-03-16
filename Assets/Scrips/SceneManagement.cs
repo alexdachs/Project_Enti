@@ -6,13 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
-
     public void ChangeScene()
     {
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Menu"))
         {
             if (Input.GetKey(KeyCode.Space))
-            {
+            { 
                 SceneManager.LoadScene("Test_lvl");
             }
         }
@@ -37,7 +36,6 @@ public class SceneManagement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame

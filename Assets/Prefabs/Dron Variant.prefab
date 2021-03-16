@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &295921473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5735478000174209720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8da71d9ddf2d64a92236bead4ca819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  startWaitTime: 1
+  moveSpots:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &219637293474121846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40,12 +57,12 @@ PrefabInstance:
     - target: {fileID: 8198831441899912064, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.82
+      value: 92.18
       objectReference: {fileID: 0}
     - target: {fileID: 8198831441899912064, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 8198831441899912064, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
@@ -104,3 +121,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b1813ee8103e24d9f003a5bc807e45, type: 3}
+--- !u!1 &5735478000174209720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5518259941804577486, guid: 49b1813ee8103e24d9f003a5bc807e45,
+    type: 3}
+  m_PrefabInstance: {fileID: 219637293474121846}
+  m_PrefabAsset: {fileID: 0}

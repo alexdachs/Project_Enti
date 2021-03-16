@@ -16,6 +16,8 @@ TagManager:
   - soldier_enemy
   - enemy
   - GM
+  - start
+  - projectile
   layers:
   - Default
   - TransparentFX

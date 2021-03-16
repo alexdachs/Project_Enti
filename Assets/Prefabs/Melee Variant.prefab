@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-217196362430742689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5415689476764053678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56fe65d786961240b7082fda69775e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  startWaitTime: 1
+  moveSpots: []
 --- !u!1001 &557506050929992288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7,6 +22,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3645797417467832695, guid: 49b1813ee8103e24d9f003a5bc807e45,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4152363271171923069, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
       propertyPath: m_Color.r
@@ -99,3 +119,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b1813ee8103e24d9f003a5bc807e45, type: 3}
+--- !u!1 &5415689476764053678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5518259941804577486, guid: 49b1813ee8103e24d9f003a5bc807e45,
+    type: 3}
+  m_PrefabInstance: {fileID: 557506050929992288}
+  m_PrefabAsset: {fileID: 0}

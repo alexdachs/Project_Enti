@@ -224,7 +224,7 @@ public class character : MonoBehaviour
         }
         if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
         {
-            SceneManager.LoadScene("Test_lvl");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             /*player.transform.position = new Vector3(checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z);
             if (goingLeft)
             {
@@ -266,6 +266,14 @@ public class character : MonoBehaviour
         {
             isJumping = true;
             ground = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "projectile")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

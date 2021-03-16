@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-879407484693937322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909951462126333005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830658dd760bbbc4ba1b31df919dd05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  startWaitTime: 1
+  timeBtwShots: 0
+  startBtwRimeShots: 1
+  moveSpots: []
+  projectile: {fileID: 8894526824720499039, guid: 7137c450832c8b34388ff7664e981f21,
+    type: 3}
 --- !u!1001 &4626322882696625795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7,6 +26,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3645797417467832695, guid: 49b1813ee8103e24d9f003a5bc807e45,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4152363271171923069, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
       propertyPath: m_Color.r
@@ -99,3 +123,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b1813ee8103e24d9f003a5bc807e45, type: 3}
+--- !u!1 &909951462126333005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5518259941804577486, guid: 49b1813ee8103e24d9f003a5bc807e45,
+    type: 3}
+  m_PrefabInstance: {fileID: 4626322882696625795}
+  m_PrefabAsset: {fileID: 0}
