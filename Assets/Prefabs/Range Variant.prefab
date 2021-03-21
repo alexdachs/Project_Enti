@@ -16,6 +16,7 @@ MonoBehaviour:
   startWaitTime: 1
   timeBtwShots: 0
   startBtwRimeShots: 1
+  shootDistance: 5
   moveSpots: []
   projectile: {fileID: 8894526824720499039, guid: 7137c450832c8b34388ff7664e981f21,
     type: 3}
@@ -59,12 +60,12 @@ PrefabInstance:
     - target: {fileID: 8198831441899912064, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.942
+      value: -0.77308
       objectReference: {fileID: 0}
     - target: {fileID: 8198831441899912064, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.371
+      value: -0.40210086
       objectReference: {fileID: 0}
     - target: {fileID: 8198831441899912064, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
@@ -114,12 +115,12 @@ PrefabInstance:
     - target: {fileID: 8198831441899912064, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.34778982
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8198831441899912064, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8138443
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b1813ee8103e24d9f003a5bc807e45, type: 3}

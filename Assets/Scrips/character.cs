@@ -12,16 +12,16 @@ public class character : MonoBehaviour
 
     public bool notMoving = false;
 
-    public float dashDistance = 10.0f;
+    public float dashDistance = 200.0f;
     private bool isDashing;
     private bool isAttacking;
     public float dashCoolDown = 0.5f;
     private bool goingLeft = false;
 
     private const float stop = 0f;
-    private const float move = 4.0f;
-    public float speed = 4.0f;
-    public float jumpPower = 10.0f;
+    private const float move = 100.0f;
+    public float speed = 100.0f;
+    public float jumpPower = 200.0f;
     public bool ground;
 
     private bool changeGravity = false;
