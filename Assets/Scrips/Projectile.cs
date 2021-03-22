@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 100.0f;
 
     private Transform player;
     private Vector2 target;

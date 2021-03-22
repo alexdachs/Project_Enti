@@ -11,7 +11,7 @@ public class RangeEnemy : MonoBehaviour
 
     public float timeBtwShots;
     public float startBtwRimeShots = 2.0f;
-    public float shootDistance = 15.0f;
+    public float shootDistance = 100.0f;
 
 
     public Transform[] moveSpots;

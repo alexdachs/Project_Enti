@@ -23,7 +23,7 @@ public class character : MonoBehaviour
     public bool ground;
 
     private bool changeGravity = false;
-    private float gravityForce = 5.0f;
+    private float gravityForce = 40.0f;
     private bool stayTop = false;
 
 

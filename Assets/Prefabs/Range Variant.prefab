@@ -16,7 +16,7 @@ MonoBehaviour:
   startWaitTime: 1
   timeBtwShots: 0
   startBtwRimeShots: 1
-  shootDistance: 5
+  shootDistance: 500
   moveSpots: []
   projectile: {fileID: 8894526824720499039, guid: 7137c450832c8b34388ff7664e981f21,
     type: 3}
@@ -31,6 +31,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -3645797417467832695, guid: 49b1813ee8103e24d9f003a5bc807e45,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4152363271171923069, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
