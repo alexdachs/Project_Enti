@@ -127,11 +127,13 @@ public class character : MonoBehaviour
                     {
                         speed = -move;
                         goingLeft = false;
+                        GetComponent<SpriteRenderer>().flipX = false;
                     }
                     else
                     {
                         speed = move;
                         goingLeft = true;
+                        GetComponent<SpriteRenderer>().flipX = true;
                     }
                     speed = -1 * speed;
                     player.velocity = new Vector2(speed, player.velocity.y);
@@ -250,10 +252,12 @@ public class character : MonoBehaviour
         if (stayTop) // Cambio de variable de si estamos arriba o abajo para modificar el salto
         {
             stayTop = false;
+            GetComponent<SpriteRenderer>().flipY = false;
         }
         else
         {
             stayTop = true;
+            GetComponent<SpriteRenderer>().flipY = true;
         }
     }
 
