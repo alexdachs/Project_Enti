@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Patrol : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float speed = 75.0f;
     private float waitTime;
     public float startWaitTime = 1.0f;
 

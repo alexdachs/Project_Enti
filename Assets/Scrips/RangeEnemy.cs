@@ -5,7 +5,7 @@ using UnityEngine;
 public class RangeEnemy : MonoBehaviour
 {
 
-    public float speed = 1.0f;
+    public float speed = 75.0f;
     private float waitTime;
     public float startWaitTime = 1.0f;
 

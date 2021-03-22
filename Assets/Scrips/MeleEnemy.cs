@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeleEnemy : MonoBehaviour
 {
 
-    public float speed = 1.0f;
+    public float speed = 50.0f;
     private float waitTime;
     public float startWaitTime = 1.0f;
 

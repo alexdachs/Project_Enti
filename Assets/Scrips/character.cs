@@ -10,8 +10,6 @@ public class character : MonoBehaviour
     public GameObject checkpoint;
     private GameMaster gm;
 
-    public bool notMoving = false;
-
     public float dashDistance = 200.0f;
     private bool isDashing;
     private bool isAttacking;
@@ -28,6 +26,8 @@ public class character : MonoBehaviour
     private float gravityForce = 5.0f;
     private bool stayTop = false;
 
+
+    public bool killed = false;
     public bool isJumping = false;
     private bool isStacked;
     private float jumpCoolDown;
@@ -74,8 +74,6 @@ public class character : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             //SceneManager.LoadScene("Test_lvl");
         }
-
-        //CheckGrounded();
     }
 
     private void FixedUpdate()
@@ -83,15 +81,7 @@ public class character : MonoBehaviour
         float delta = Time.deltaTime * 65;
         if (!isDashing)
         {
-            if (notMoving)
-            {
-                player.velocity = new Vector2(speed, player.velocity.y);
-            }
-            else
-            {
-                // Poner Time.deltaTime
-                player.velocity = new Vector2(speed * delta, player.velocity.y); // Movimiento constante
-            }
+            player.velocity = new Vector2(speed * delta, player.velocity.y); // Movimiento constante
         }   
     }
 
@@ -101,115 +91,58 @@ public class character : MonoBehaviour
         {
             if (stayTop) // Salto estando en el techo
             {
-                if (notMoving)
+                if (ground || killed)
                 {
-                    if (ground)
+                    isJumping = true;
+                    player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                }
+                else
+                {
+                    if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
                     {
-                        isJumping = true;
-                        player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                        speed = -move;
+                        goingLeft = false;
                     }
                     else
                     {
-                        if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
-                        {
-                            speed = -move;
-                            goingLeft = false;
-                        }
-                        else
-                        {
-                            speed = move;
-                            goingLeft = true;
-                        }
-                        speed = -1 * speed;
-                        player.velocity = new Vector2(speed, player.velocity.y);
-                        notMoving = false;
-                        isJumping = true;
-                        player.velocity = new Vector2(player.velocity.x, -jumpPower);
+                        speed = move;
+                        goingLeft = true;
                     }
-                }
-                else
-                { 
+                    speed = -1 * speed;
+                    player.velocity = new Vector2(speed, player.velocity.y);
+                    isJumping = true;
                     player.velocity = new Vector2(player.velocity.x, -jumpPower);
                 }
             }
             else // Salto normal
             {
-                if (notMoving)
+                if (ground || killed)
                 {
-                    if (ground)
-                    {
-                        isJumping = true;
-                        player.velocity = new Vector2(player.velocity.x, jumpPower);
-                    }
-                    else
-                    {
-                        if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
-                        {
-                            speed = -move;
-                            goingLeft = false;
-                        }
-                        else
-                        {
-                            speed = move;
-                            goingLeft = true;
-                        }
-                        speed = -1 * speed;
-                        player.velocity = new Vector2(speed, player.velocity.y);
-                        notMoving = false;
-                        isJumping = true;
-                        player.velocity = new Vector2(player.velocity.x, jumpPower);
-                    }
+                    isJumping = true;
+                    player.velocity = new Vector2(player.velocity.x, jumpPower);
                 }
                 else
                 {
+                    if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
+                    {
+                        speed = -move;
+                        goingLeft = false;
+                    }
+                    else
+                    {
+                        speed = move;
+                        goingLeft = true;
+                    }
+                    speed = -1 * speed;
+                    player.velocity = new Vector2(speed, player.velocity.y);
+                    isJumping = true;
                     player.velocity = new Vector2(player.velocity.x, jumpPower);
                 }
             }
         }
-        else if (isJumping && notMoving) // Si esta stacked
-        {
-            if (stayTop) // En el techo
-            {
-                if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
-                {
-                    speed = -move;
-                    goingLeft = false;
-                }
-                else
-                {
-                    speed = move;
-                    goingLeft = true;
-                }
-                speed = -1 * speed;
-                player.velocity = new Vector2(speed, player.velocity.y);
-                notMoving = false;
-                isJumping = true;
-                player.velocity = new Vector2(player.velocity.x, -jumpPower);
-
-            }
-            else // En el suelo
-            {
-                if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
-                {
-                    speed = -move;
-                    goingLeft = false;
-                }
-                else
-                {
-                    speed = move;
-                    goingLeft = true;
-                }
-                speed = -1 * speed;
-                player.velocity = new Vector2(speed, player.velocity.y);
-                notMoving = false;
-                isJumping = true;
-                player.velocity = new Vector2(player.velocity.x, jumpPower);
-
-            }
-        }  
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionStay2D(Collision2D col)
     {
         if (col.gameObject.tag == "floor") // Reinicio del salto
         {
@@ -220,34 +153,15 @@ public class character : MonoBehaviour
         }
         if (col.gameObject.tag == "wall") //Rebote con la pared
         {
-            notMoving = true;
-            speed = stop;
             isJumping = false;
         }
         if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            /*player.transform.position = new Vector3(checkpoint.transform.position.x, checkpoint.transform.position.y, checkpoint.transform.position.z);
-            if (goingLeft)
-            {
-                speed = -1 * speed;
-            }
-            player.gravityScale = gravityForce;
-            changeGravity = false;
-            stayTop = false;
-            isJumping = false;
-            goingLeft = false;
-            speed = move;*/
         }
         if (col.gameObject.tag == "Finish")
         {
             SceneManager.LoadScene("Victory");
-        }
-        //COLECCIONABLE
-        if(col.gameObject.tag == "collectable")
-        {
-            collectable = true;
-            Destroy(col.gameObject);
         }
 
         // ENEMIGOS
@@ -259,6 +173,7 @@ public class character : MonoBehaviour
                 Destroy(col.gameObject);
                 isDashing = false;
                 isJumping = false;
+                killed = true;
             }
             else
             {
@@ -274,6 +189,11 @@ public class character : MonoBehaviour
         {
             isJumping = true;
             ground = false;
+            killed = false;
+        }
+        if (col.gameObject.tag == "wall")
+        {
+            isJumping = true;
         }
     }
 
@@ -282,6 +202,13 @@ public class character : MonoBehaviour
         if (col.gameObject.tag == "projectile")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        //COLECCIONABLE
+        if (col.gameObject.tag == "collectable")
+        {
+            collectable = true;
+            Destroy(col.gameObject);
         }
     }
 
