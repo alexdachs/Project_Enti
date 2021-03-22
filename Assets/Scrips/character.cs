@@ -22,9 +22,9 @@ public class character : MonoBehaviour
     public float jumpPower = 200.0f;
     public bool ground;
 
-    private bool changeGravity = false;
+    public bool changeGravity = false;
     private float gravityForce = 40.0f;
-    private bool stayTop = false;
+    public bool stayTop = false;
 
 
     public bool killed = false;
@@ -150,7 +150,6 @@ public class character : MonoBehaviour
         {
             isDashing = false;
             isJumping = false;
-            changeGravity = false;
             ground = true;
         }
         if (col.gameObject.tag == "wall") //Rebote con la pared
@@ -182,6 +181,15 @@ public class character : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
             
+        }
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "floor") // Si se pone en el Collision Stay puedes cambiar 2 veces la gravedad
+        {
+            changeGravity = false;
         }
     }
 
@@ -248,16 +256,22 @@ public class character : MonoBehaviour
         {
             player.gravityScale = -1 * player.gravityScale;
             changeGravity = true;
+            if (stayTop)
+            {
+                GetComponent<SpriteRenderer>().flipY = false;
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().flipY = true;
+            }
         }
         if (stayTop) // Cambio de variable de si estamos arriba o abajo para modificar el salto
         {
             stayTop = false;
-            GetComponent<SpriteRenderer>().flipY = false;
         }
         else
         {
             stayTop = true;
-            GetComponent<SpriteRenderer>().flipY = true;
         }
     }
 
