@@ -172,6 +172,10 @@ public class character : MonoBehaviour
         {
             SceneManager.LoadScene("Victory");
         }
+        if (col.gameObject.tag == "next_level")
+        {
+            SceneManager.LoadScene("Level1");
+        }
 
         // ENEMIGOS
 

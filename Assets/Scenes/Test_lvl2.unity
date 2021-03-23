@@ -665,12 +665,12 @@ PrefabInstance:
     - target: {fileID: 9068871182106249815, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5
+      value: -26.37
       objectReference: {fileID: 0}
     - target: {fileID: 9068871182106249815, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.88
+      value: -1.69
       objectReference: {fileID: 0}
     - target: {fileID: 9068871182106249815, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}

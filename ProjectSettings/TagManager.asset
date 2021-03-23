@@ -19,6 +19,7 @@ TagManager:
   - start
   - projectile
   - collectable
+  - next_level
   layers:
   - Default
   - TransparentFX
