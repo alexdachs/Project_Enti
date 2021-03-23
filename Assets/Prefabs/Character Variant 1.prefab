@@ -18,9 +18,30 @@ MonoBehaviour:
   speed: 100
   jumpPower: 200
   ground: 0
+  changeGravity: 0
+  stayTop: 0
   killed: 0
   isJumping: 0
   collectable: 0
+--- !u!95 &7629558933152778177
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8607696343181369650}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4031673374152426027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -117,7 +138,7 @@ PrefabInstance:
     - target: {fileID: 4649913448950440729, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_Name
-      value: Character
+      value: Character Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 4716541064805885790, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}

@@ -33,12 +33,16 @@ public class character : MonoBehaviour
     private float jumpCoolDown;
 
     public bool collectable = false;
+
+    //Animaciones
+    private Animator anim;
     
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPoint;
     }
@@ -48,7 +52,7 @@ public class character : MonoBehaviour
     {
         if (Input.GetButtonDown ("Jump")) // Salto
         {
-            Jump();        
+            Jump();       
         }
 
         if (Input.GetKeyDown(KeyCode.D)) // Dash
@@ -82,6 +86,7 @@ public class character : MonoBehaviour
         if (!isDashing)
         {
             player.velocity = new Vector2(speed * delta, player.velocity.y); // Movimiento constante
+            anim.SetBool("move", true);
         }   
     }
 
@@ -141,6 +146,7 @@ public class character : MonoBehaviour
                     player.velocity = new Vector2(player.velocity.x, jumpPower);
                 }
             }
+            //anim.SetBool("jump",true);
         }
     }
 
@@ -151,10 +157,12 @@ public class character : MonoBehaviour
             isDashing = false;
             isJumping = false;
             ground = true;
+
         }
         if (col.gameObject.tag == "wall") //Rebote con la pared
         {
             isJumping = false;
+
         }
         if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
         {
