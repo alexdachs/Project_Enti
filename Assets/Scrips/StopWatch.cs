@@ -24,11 +24,11 @@ public class StopWatch : MonoBehaviour
     }
     void stopWatchCalcul() {
         timer += Time.deltaTime;
-        seconds = timer % 60;
-        minutes = timer / 60;
-        hours = timer / 3600;
+        seconds = (int)(timer % 60);
+        minutes = (int)((timer / 60) % 60);
+        hours = (int)(timer / 3600);
 
-        stopWatchText.text = hours + ":" + minutes + ":" + seconds;
+        stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
 
 
     }
