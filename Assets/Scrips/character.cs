@@ -33,6 +33,7 @@ public class character : MonoBehaviour
     private float jumpCoolDown;
 
     public bool collectable = false;
+    private bool isinmortal = false;
 
     //Animaciones
     private Animator anim;
@@ -77,6 +78,10 @@ public class character : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             //SceneManager.LoadScene("Test_lvl");
+        }
+        if(Input.GetKeyUp(KeyCode.I)) //inmortal
+        {
+            isinmortal = true;
         }
     }
 
@@ -172,9 +177,9 @@ public class character : MonoBehaviour
         {
             SceneManager.LoadScene("Victory");
         }
-        if (col.gameObject.tag == "next_level")
+        if (col.gameObject.tag == "level1")
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Level_1");
         }
 
         // ENEMIGOS
@@ -183,6 +188,12 @@ public class character : MonoBehaviour
         {
             if (isAttacking)
             {
+                Destroy(col.gameObject);
+                isDashing = false;
+                isJumping = false;
+                killed = true;
+            }
+            if (isinmortal == true){
                 Destroy(col.gameObject);
                 isDashing = false;
                 isJumping = false;
@@ -223,7 +234,9 @@ public class character : MonoBehaviour
     {
         if (col.gameObject.tag == "projectile")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if(isinmortal == false){
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
 
         //COLECCIONABLE
