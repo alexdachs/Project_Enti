@@ -16,7 +16,7 @@ public class SceneManagement : MonoBehaviour
                 SceneManager.LoadScene("Test_lvl");
             }
         }
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Test_lvl"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Test_lvl") || SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level_1"))
         {
             if (Input.GetKey(KeyCode.P))
             {

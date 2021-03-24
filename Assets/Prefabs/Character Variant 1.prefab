@@ -10,7 +10,7 @@ Animator:
   m_GameObject: {fileID: 8607696343181369650}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9baf603c55429c84d84cfd074693e566, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -33,6 +33,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpoint: {fileID: 0}
   dashDistance: 200
+  isDashing: 0
+  isAttacking: 0
   dashCoolDown: 0.5
   speed: 100
   jumpPower: 200
@@ -72,17 +74,17 @@ PrefabInstance:
     - target: {fileID: -6833738143101462104, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.4494934
+      value: 0.75946045
       objectReference: {fileID: 0}
     - target: {fileID: -6833738143101462104, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_Size.y
-      value: 26.901001
+      value: 26.5997
       objectReference: {fileID: 0}
     - target: {fileID: 749955629794036797, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.29774475
+      value: 0.70293427
       objectReference: {fileID: 0}
     - target: {fileID: 749955629794036797, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
@@ -97,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 749955629794036797, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_Size.y
-      value: 26.597687
+      value: 26.656784
       objectReference: {fileID: 0}
     - target: {fileID: 749955629794036797, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
@@ -138,7 +140,7 @@ PrefabInstance:
     - target: {fileID: 4649913448950440729, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_Name
-      value: Character Variant 1
+      value: Character
       objectReference: {fileID: 0}
     - target: {fileID: 4716541064805885790, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
@@ -153,12 +155,12 @@ PrefabInstance:
     - target: {fileID: 9068871182106249815, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -300
+      value: -270
       objectReference: {fileID: 0}
     - target: {fileID: 9068871182106249815, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -145
+      value: -143.7
       objectReference: {fileID: 0}
     - target: {fileID: 9068871182106249815, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
@@ -168,17 +170,17 @@ PrefabInstance:
     - target: {fileID: 9068871182106249815, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9068871182106249815, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9068871182106249815, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9068871182106249815, guid: 931e6031f2dfa9c469965c7c8355a2d1,
         type: 3}

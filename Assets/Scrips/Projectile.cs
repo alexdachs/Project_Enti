@@ -15,7 +15,7 @@ public class Projectile : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("character").transform;
 
-        target = new Vector2(player.position.x, player.position.y);
+        target = new Vector2(player.position.x, transform.position.y);
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class Projectile : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
-        if (transform.position.x == target.x && transform.position.y == target.y)
+        if (transform.position.x == target.x)
         {
             DestroyProjectile();
         }

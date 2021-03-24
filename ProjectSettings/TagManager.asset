@@ -21,6 +21,7 @@ TagManager:
   - collectable
   - next_level
   - level1
+  - activator
   layers:
   - Default
   - TransparentFX

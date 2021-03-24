@@ -11,7 +11,7 @@ public class character : MonoBehaviour
     private GameMaster gm;
 
     public float dashDistance = 200.0f;
-    private bool isDashing;
+    public bool isDashing;
     public bool isAttacking;
     public float dashCoolDown = 0.5f;
     private bool goingLeft = false;
@@ -58,7 +58,7 @@ public class character : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D)) // Dash
         {
-            StartCoroutine(Dash(1f));
+            StartCoroutine(HelpDash());
         }
 
         if (Input.GetKeyDown(KeyCode.W)) // Cambio Gravedad
@@ -151,7 +151,6 @@ public class character : MonoBehaviour
                     player.velocity = new Vector2(player.velocity.x, jumpPower);
                 }
             }
-            //anim.SetBool("jump",true);
         }
     }
 
@@ -204,7 +203,7 @@ public class character : MonoBehaviour
                 isJumping = false;
                 killed = true;
             }
-            if (isinmortal == true)
+            if (isinmortal)
             {
                 Destroy(col.gameObject);
                 isDashing = false;
@@ -237,7 +236,8 @@ public class character : MonoBehaviour
     {
         if (col.gameObject.tag == "projectile")
         {
-            if(isinmortal == false){
+            if(isinmortal == false)
+            {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
@@ -272,9 +272,25 @@ public class character : MonoBehaviour
             isAttacking = false;
             player.gravityScale = gravity;
         }
-        if (isDashing && ground)
+       /* if (isDashing && ground)
         {
             isDashing = false;
+        }*/
+    }
+
+    IEnumerator HelpDash()
+    {
+        if (!isDashing && !stayTop)
+        {
+            player.velocity = new Vector2(player.velocity.x, 50f);
+            yield return new WaitForSeconds(0.1f);
+            StartCoroutine(Dash(0.6f));
+        }
+        if (!isDashing && stayTop)
+        {
+            player.velocity = new Vector2(player.velocity.x, -50f);
+            yield return new WaitForSeconds(0.1f);
+            StartCoroutine(Dash(0.6f));
         }
     }
 
