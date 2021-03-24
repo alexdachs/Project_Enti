@@ -1810,6 +1810,11 @@ PrefabInstance:
       propertyPath: moveSpots.Array.data[1]
       value: 
       objectReference: {fileID: 435290253}
+    - target: {fileID: 5650830492514066175, guid: bf08702a2c7d13b4aab6bb8114665938,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5735478000174209720, guid: bf08702a2c7d13b4aab6bb8114665938,
         type: 3}
       propertyPath: m_Name
@@ -3064,6 +3069,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1646856002758761347, guid: 0ccd77512a376594fa857640c7cc40f7,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.37595367
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646856002758761347, guid: 0ccd77512a376594fa857640c7cc40f7,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 27.04808
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439143203302280726, guid: 0ccd77512a376594fa857640c7cc40f7,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1270752
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439143203302280726, guid: 0ccd77512a376594fa857640c7cc40f7,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 26.939026
+      objectReference: {fileID: 0}
     - target: {fileID: 5343657126591580284, guid: 0ccd77512a376594fa857640c7cc40f7,
         type: 3}
       propertyPath: m_LocalPosition.x

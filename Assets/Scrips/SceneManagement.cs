@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
+
     public void ChangeScene()
     {
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Menu"))

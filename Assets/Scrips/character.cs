@@ -12,7 +12,7 @@ public class character : MonoBehaviour
 
     public float dashDistance = 200.0f;
     private bool isDashing;
-    private bool isAttacking;
+    public bool isAttacking;
     public float dashCoolDown = 0.5f;
     private bool goingLeft = false;
 
@@ -179,7 +179,18 @@ public class character : MonoBehaviour
         }
         if (col.gameObject.tag == "level1")
         {
+            gm.lastCheckPoint = new Vector3(-270, -143, 0);
             SceneManager.LoadScene("Level_1");
+        }
+
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "floor") // Si se pone en el Collision Stay puedes cambiar 2 veces la gravedad
+        {
+            changeGravity = false;
         }
 
         // ENEMIGOS
@@ -193,7 +204,8 @@ public class character : MonoBehaviour
                 isJumping = false;
                 killed = true;
             }
-            if (isinmortal == true){
+            if (isinmortal == true)
+            {
                 Destroy(col.gameObject);
                 isDashing = false;
                 isJumping = false;
@@ -203,16 +215,7 @@ public class character : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
-            
-        }
-    }
 
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "floor") // Si se pone en el Collision Stay puedes cambiar 2 veces la gravedad
-        {
-            changeGravity = false;
         }
     }
 
