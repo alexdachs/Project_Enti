@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8894526824720499039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.372448, y: 1.9145904, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_LocalScale: {x: 35, y: 35, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,8 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
-  character: {fileID: 8607696343181369650, guid: 0ccd77512a376594fa857640c7cc40f7,
-    type: 3}
 --- !u!58 &1399275732116422650
 CircleCollider2D:
   m_ObjectHideFlags: 0

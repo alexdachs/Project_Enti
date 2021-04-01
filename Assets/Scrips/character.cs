@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class character : MonoBehaviour
 {
     private Rigidbody2D player;
+    private BoxCollider2D playerBox;
     public GameObject checkpoint;
     private GameMaster gm;
 
@@ -28,7 +29,7 @@ public class character : MonoBehaviour
 
 
     public bool killed = false;
-    public bool isJumping = false;
+    public bool isJumping = true;
     private bool isStacked;
     private float jumpCoolDown;
 
@@ -43,6 +44,7 @@ public class character : MonoBehaviour
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        playerBox = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPoint;
@@ -166,10 +168,16 @@ public class character : MonoBehaviour
         if (col.gameObject.tag == "wall") //Rebote con la pared
         {
             isJumping = false;
+         /*   float center_x = (playerBox.bounds.min.x + playerBox.bounds.max.x) / 2;
+            Vector2 centerPosition = new Vector2(center_x, playerBox.bounds.min.y);
+
+            RaycastHit2D[] hits = Physics2D.RaycastAll(centerPosition, -Vector2.up, 0.5f);
+            if (checkRaycastWall(hits)) { ground = true; }*/
 
         }
         if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
         {
+            ground = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         if (col.gameObject.tag == "Finish")
@@ -181,7 +189,6 @@ public class character : MonoBehaviour
             gm.lastCheckPoint = new Vector3(-270, -143, 0);
             SceneManager.LoadScene("Level_1");
         }
-
     }
 
 
@@ -256,6 +263,7 @@ public class character : MonoBehaviour
         {
             isDashing = true;
             isAttacking = true;
+            isinmortal = true;
             player.velocity = new Vector2(player.velocity.x, 0f);
 
             if (!goingLeft) // Dash si vas hacia la derecha
@@ -270,6 +278,7 @@ public class character : MonoBehaviour
             player.gravityScale = 0;
             yield return new WaitForSeconds(0.4f);
             isAttacking = false;
+            isinmortal = false;
             player.gravityScale = gravity;
         }
        /* if (isDashing && ground)
@@ -292,6 +301,18 @@ public class character : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             StartCoroutine(Dash(0.6f));
         }
+    }
+
+    private bool checkRaycastWall(RaycastHit2D[] hits)
+    {
+        foreach (RaycastHit2D hit in hits)
+        {
+            if (hit.collider != null)
+            {
+                if (hit.collider.gameObject.tag == "wall") { return true; }
+            }
+        }
+        return false;
     }
 
     private void GravityChange()
