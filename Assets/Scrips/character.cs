@@ -168,6 +168,7 @@ public class character : MonoBehaviour
         if (col.gameObject.tag == "wall") //Rebote con la pared
         {
             isJumping = false;
+            isDashing = false;
          /*   float center_x = (playerBox.bounds.min.x + playerBox.bounds.max.x) / 2;
             Vector2 centerPosition = new Vector2(center_x, playerBox.bounds.min.y);
 
@@ -276,7 +277,7 @@ public class character : MonoBehaviour
             }
             float gravity = player.gravityScale;
             player.gravityScale = 0;
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.6f);
             isAttacking = false;
             isinmortal = false;
             player.gravityScale = gravity;
