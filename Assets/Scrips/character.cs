@@ -98,16 +98,12 @@ public class character : MonoBehaviour
         if (!ground && !endLevel && !isDead)
         {
             runSound.Play();
-            if (endLevel || isDead)
-            {
-                runSound.Stop();
-            }
         }
 
         if (isDead)
         {
             deadTime += Time.deltaTime;
-            if (deadTime >= 1.0f)
+            if (deadTime >= 1.6f)
             {
                 PlayerPrefs.SetFloat(filetimer, timer);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -253,6 +249,7 @@ public class character : MonoBehaviour
         }
         if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
         {
+            runSound.Stop();
             anim.SetBool("death", true);
             ground = true;
             isDead = true;
@@ -296,6 +293,7 @@ public class character : MonoBehaviour
             }
             else
             {
+                runSound.Stop();
                 anim.SetBool("death", true);
                 isDead = true;
             }
@@ -323,6 +321,7 @@ public class character : MonoBehaviour
         {
             if(isinmortal == false)
             {
+                runSound.Stop();
                 anim.SetBool("death", true);
                 isDead = true;
             }
@@ -339,6 +338,7 @@ public class character : MonoBehaviour
             PlayerPrefs.SetInt(savecollect, collectable);
         }
         if(col.gameObject.tag == "endlevel") {
+            runSound.Stop();
             endLevel = true;
             PlayerPrefs.SetFloat(filetimer, timer);
             levelcomplet.SetActive(true);
