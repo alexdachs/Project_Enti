@@ -393,6 +393,14 @@ PrefabInstance:
       propertyPath: collectableno
       value: 
       objectReference: {fileID: 763990492}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: starcompletef
+      value: 
+      objectReference: {fileID: 763990504}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: startimef
+      value: 
+      objectReference: {fileID: 763990503}
     - target: {fileID: 1862283505, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2867,6 +2875,18 @@ MonoBehaviour:
 --- !u!4 &763990502 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4032450705674218648, guid: eef9db967a42a1146a643402bbe44f14,
+    type: 3}
+  m_PrefabInstance: {fileID: 763990491}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &763990503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4032450706456723045, guid: eef9db967a42a1146a643402bbe44f14,
+    type: 3}
+  m_PrefabInstance: {fileID: 763990491}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &763990504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4032450705305730358, guid: eef9db967a42a1146a643402bbe44f14,
     type: 3}
   m_PrefabInstance: {fileID: 763990491}
   m_PrefabAsset: {fileID: 0}

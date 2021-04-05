@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class botones : MonoBehaviour
 {
-    private GameMaster gm;
-    private void Start()
+    public GameMaster gm;
+    public void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
