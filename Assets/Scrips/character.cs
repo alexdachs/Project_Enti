@@ -33,16 +33,29 @@ public class character : MonoBehaviour
     private bool isStacked;
     private float jumpCoolDown;
 
-    public bool collectable = false;
+    int collectable = 0;
     private bool isinmortal = false;
 
     //Animaciones
     private Animator anim;
     
+    //Stopwatch
+    float timer;
+    float seconds;
+    float minutes;
+    float hours;
+
+    [SerializeField] Text stopWatchText;
+    
+    //Guardados
+    string filetimer;
+    string savecollect;
 
     // Start is called before the first frame update
     void Start()
     {
+        timer = PlayerPrefs.GetFloat(filetimer, 0); //Stopwatch
+        collectable = PlayerPrefs.GetInt(savecollect, 0);
         player = GetComponent<Rigidbody2D>();
         playerBox = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
@@ -53,6 +66,8 @@ public class character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        stopWatchCalcul();
+
         if (Input.GetButtonDown ("Jump")) // Salto
         {
             Jump();       
@@ -253,8 +268,12 @@ public class character : MonoBehaviour
         //COLECCIONABLE
         if (col.gameObject.tag == "collectable")
         {
-            collectable = true;
+            collectable = 1;
             Destroy(col.gameObject);
+        }
+        if (col.gameObject.tag == "checkpoint") {
+            PlayerPrefs.SetFloat(filetimer, timer);
+            PlayerPrefs.SetInt(savecollect, collectable);
         }
     }
 
@@ -340,5 +359,16 @@ public class character : MonoBehaviour
             stayTop = true;
         }
     }
+    void stopWatchCalcul() {
+        timer += Time.deltaTime;
+        seconds = (int)(timer % 60);
+        minutes = (int)((timer / 60) % 60);
+        hours = (int)(timer / 3600);
+        stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
+
+    }
+    // public void SetFloat (float savetimer, float filetimer) {
+    //     PlayerPrefs.SetFloat(savetimer, filetimer);
+    // }
 
 }
