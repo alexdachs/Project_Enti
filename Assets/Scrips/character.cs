@@ -25,6 +25,8 @@ public class character : MonoBehaviour
     public float jumpPower = 200.0f;
     public bool ground;
 
+    private bool endLevel = false;
+
     public bool changeGravity = false;
     //private float gravityForce = 40.0f;
     public bool stayTop = false;
@@ -94,6 +96,10 @@ public class character : MonoBehaviour
         if (!ground)
         {
             runSound.Play();
+            if (endLevel)
+            {
+                runSound.Stop();
+            }
         }
 
         if (Input.GetButtonDown ("Jump")) // Salto
@@ -136,7 +142,7 @@ public class character : MonoBehaviour
     private void FixedUpdate()
     {
         float delta = Time.deltaTime * 65;
-        if (!isDashing)
+        if (!isDashing && !endLevel)
         {
             player.velocity = new Vector2(speed * delta, player.velocity.y); // Movimiento constante
             anim.SetBool("move", true);
@@ -310,6 +316,7 @@ public class character : MonoBehaviour
             PlayerPrefs.SetInt(savecollect, collectable);
         }
         if(col.gameObject.tag == "endlevel") {
+            endLevel = true;
             PlayerPrefs.SetFloat(filetimer, timer);
             levelcomplet.SetActive(true);
             stopwatch.SetActive(false);
@@ -428,7 +435,7 @@ public class character : MonoBehaviour
         seconds = (int)(timer % 60);
         minutes = (int)((timer / 60) % 60);
         hours = (int)(timer / 3600);
-       // stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
+        stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
 
     }
     // public void SetFloat (float savetimer, float filetimer) {
