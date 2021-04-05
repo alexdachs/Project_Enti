@@ -6,11 +6,13 @@ public class CameraControl : MonoBehaviour
 {
     public GameObject player;
     public Camera gameCamera;
+    private AudioSource audioC;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       audioC =  gameCamera.GetComponent<AudioSource>();
+       audioC.Play(); 
     }
 
     // Update is called once per frame
