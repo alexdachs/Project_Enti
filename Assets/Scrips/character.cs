@@ -51,6 +51,25 @@ public class character : MonoBehaviour
     string filetimer;
     string savecollect;
 
+    //Level complete
+    public GameObject levelcomplet;
+    public GameObject starcomplete;
+    public GameObject startime;
+    public GameObject starcollect;
+    public GameObject stopwatch;
+    public Text timefinish;
+    float timerfinish;
+    float secondsf;
+    float minutesf;
+    float hoursf;
+    public Text minimumtime;
+    float timerminimum = 90f;
+    float secondsm;
+    float minutesm;
+    float hoursm;
+    public GameObject collectableyes;
+    public GameObject collectableno;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -197,6 +216,7 @@ public class character : MonoBehaviour
         if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
         {
             ground = true;
+            PlayerPrefs.SetFloat(filetimer, timer);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         if (col.gameObject.tag == "Finish")
@@ -238,6 +258,7 @@ public class character : MonoBehaviour
             }
             else
             {
+                PlayerPrefs.SetFloat(filetimer, timer);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
 
@@ -264,6 +285,7 @@ public class character : MonoBehaviour
         {
             if(isinmortal == false)
             {
+                PlayerPrefs.SetFloat(filetimer, timer);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
@@ -277,6 +299,36 @@ public class character : MonoBehaviour
         if (col.gameObject.tag == "checkpoint") {
             PlayerPrefs.SetFloat(filetimer, timer);
             PlayerPrefs.SetInt(savecollect, collectable);
+        }
+        if(col.gameObject.tag == "endlevel") {
+            PlayerPrefs.SetFloat(filetimer, timer);
+            levelcomplet.SetActive(true);
+            stopwatch.SetActive(false);
+            starcomplete.SetActive(true);
+            //coger tiempo y mostrar/calcular
+            timerfinish = PlayerPrefs.GetFloat(filetimer, 0);            
+            secondsf = (int)(timerfinish % 60);
+            minutesf = (int)((timerfinish / 60) % 60);
+            hoursf = (int)(timerfinish / 3600);
+            timefinish.text = hoursf.ToString("00") + ":" + minutesf.ToString("00") + ":" + secondsf.ToString("00");
+            
+            secondsm = (int)(timerminimum % 60);
+            minutesm = (int)((timerminimum / 60) % 60);
+            hoursm = (int)(timerminimum / 3600);
+            minimumtime.text = hoursm.ToString("00") + ":" + minutesm.ToString("00") + ":" + secondsm.ToString("00");
+           
+            collectable = PlayerPrefs.GetInt(savecollect, 0);
+            if( timerfinish < timerminimum ) {
+                startime.SetActive(true);
+            }
+            if(collectable == 1) {
+                starcollect.SetActive(true);
+                collectableyes.SetActive(true);
+                collectableno.SetActive(false);
+            }
+            PlayerPrefs.DeleteKey(filetimer);
+            PlayerPrefs.DeleteKey(savecollect);
+
         }
     }
 
