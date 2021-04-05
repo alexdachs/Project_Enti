@@ -382,15 +382,19 @@ public class character : MonoBehaviour
     {
         if (!isDashing && !stayTop)
         {
+            anim.SetBool("dash", true);
             player.velocity = new Vector2(player.velocity.x, 50f);
             yield return new WaitForSeconds(0.1f);
             StartCoroutine(Dash(0.6f));
+            anim.SetBool("dash", false);
         }
         if (!isDashing && stayTop)
         {
+            anim.SetBool("dash", true);
             player.velocity = new Vector2(player.velocity.x, -50f);
             yield return new WaitForSeconds(0.1f);
             StartCoroutine(Dash(0.6f));
+            anim.SetBool("dash", false);
         }
     }
 
