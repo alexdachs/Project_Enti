@@ -33971,10 +33971,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 650170926}
     - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
-      propertyPath: stopwatch
-      value: 
-      objectReference: {fileID: 754687227}
-    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: starcomplete
       value: 
       objectReference: {fileID: 1230433561}
@@ -33987,13 +33983,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1496268543}
     - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
-      propertyPath: minimumtime
+      propertyPath: stopwatch
       value: 
-      objectReference: {fileID: 1625942430}
+      objectReference: {fileID: 754687227}
     - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: timefinish
       value: 
       objectReference: {fileID: 1327862799}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: minimumtime
+      value: 
+      objectReference: {fileID: 1625942430}
     - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: collectableyes
       value: 
