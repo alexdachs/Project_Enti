@@ -23,6 +23,7 @@ TagManager:
   - level1
   - activator
   - endlevel
+  - dashSound
   layers:
   - Default
   - TransparentFX
