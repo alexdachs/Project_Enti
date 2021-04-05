@@ -80,7 +80,10 @@ public class character : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W)) // Cambio Gravedad
         {
-            GravityChange();
+            if (!isAttacking)
+            {
+                GravityChange();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.S) && !isJumping) // Encogerse

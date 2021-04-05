@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 75
   startWaitTime: 1
+  canShoot: 0
   timeBtwShots: 0
   startBtwTimeShots: 3
-  shootDistance: 500
+  shootDistance: 10
   moveSpots:
   - {fileID: 0}
   - {fileID: 0}
