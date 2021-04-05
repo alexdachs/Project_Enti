@@ -18,6 +18,7 @@ public class character : MonoBehaviour
     public bool isAttacking;
     public float dashCoolDown = 0.5f;
     private bool goingLeft = false;
+    private bool isDead = false;
 
     private const float stop = 0f;
     private const float move = 100.0f;
@@ -25,6 +26,7 @@ public class character : MonoBehaviour
     public float jumpPower = 200.0f;
     public bool ground;
 
+    private float deadTime;
     private bool endLevel = false;
 
     public bool changeGravity = false;
@@ -93,13 +95,32 @@ public class character : MonoBehaviour
     {
         stopWatchCalcul();
 
-        if (!ground)
+        if (!ground && !endLevel && !isDead)
         {
             runSound.Play();
-            if (endLevel)
+            if (endLevel || isDead)
             {
                 runSound.Stop();
             }
+        }
+
+        if (isDead)
+        {
+            deadTime += Time.deltaTime;
+            if (deadTime >= 1.0f)
+            {
+                PlayerPrefs.SetFloat(filetimer, timer);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+
+        if (isJumping)
+        {
+            anim.SetBool("jump", true);
+        }
+        else if (!isJumping)
+        {
+            anim.SetBool("jump", false);
         }
 
         if (Input.GetButtonDown ("Jump")) // Salto
@@ -142,7 +163,7 @@ public class character : MonoBehaviour
     private void FixedUpdate()
     {
         float delta = Time.deltaTime * 65;
-        if (!isDashing && !endLevel)
+        if (!isDashing && !endLevel && !isDead)
         {
             player.velocity = new Vector2(speed * delta, player.velocity.y); // Movimiento constante
             anim.SetBool("move", true);
@@ -166,11 +187,13 @@ public class character : MonoBehaviour
                     {
                         speed = -move;
                         goingLeft = false;
+                        GetComponent<SpriteRenderer>().flipX = false;
                     }
                     else
                     {
                         speed = move;
                         goingLeft = true;
+                        GetComponent<SpriteRenderer>().flipX = true;
                     }
                     speed = -1 * speed;
                     player.velocity = new Vector2(speed, player.velocity.y);
@@ -230,9 +253,9 @@ public class character : MonoBehaviour
         }
         if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
         {
+            anim.SetBool("death", true);
             ground = true;
-            PlayerPrefs.SetFloat(filetimer, timer);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            isDead = true;
         }
         if (col.gameObject.tag == "Finish")
         {
@@ -273,8 +296,8 @@ public class character : MonoBehaviour
             }
             else
             {
-                PlayerPrefs.SetFloat(filetimer, timer);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                anim.SetBool("death", true);
+                isDead = true;
             }
 
         }
@@ -300,8 +323,8 @@ public class character : MonoBehaviour
         {
             if(isinmortal == false)
             {
-                PlayerPrefs.SetFloat(filetimer, timer);
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                anim.SetBool("death", true);
+                isDead = true;
             }
         }
 
