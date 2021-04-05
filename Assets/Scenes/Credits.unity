@@ -555,8 +555,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 314, y: -113.299995}
-  m_SizeDelta: {x: 259.95642, y: 108.688995}
+  m_AnchoredPosition: {x: 319.8, y: -110.4}
+  m_SizeDelta: {x: 271.52167, y: 114.47162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1254508530
 MonoBehaviour:
@@ -590,7 +590,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Programmer
+  m_Text: 'Project Manager
+
+    Programmer
 
     Level Design'
 --- !u!222 &1254508531

@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class botones : MonoBehaviour
 {
-    private GameMaster gm;
-    void Start()
+    public GameMaster gm;
+    public void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
@@ -15,7 +15,7 @@ public class botones : MonoBehaviour
     }
     public void recargartuto () {
         SceneManager.LoadScene("Tutorial");
-    }    
+    }
     public void siguientenivel () {
         SceneManager.LoadScene("Level_1");
     }
@@ -49,5 +49,5 @@ public class botones : MonoBehaviour
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_3");
     }
-    
+
 }

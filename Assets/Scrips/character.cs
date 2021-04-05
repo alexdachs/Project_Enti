@@ -61,6 +61,8 @@ public class character : MonoBehaviour
     public GameObject levelcomplet;
     public GameObject starcomplete;
     public GameObject startime;
+    public GameObject starcompletef;
+    public GameObject startimef;
     public GameObject starcollect;
     public GameObject stopwatch;
     public Text timefinish;
@@ -345,6 +347,7 @@ public class character : MonoBehaviour
             endLevel = true;
             PlayerPrefs.SetFloat(filetimer, timer);
             levelcomplet.SetActive(true);
+            starcompletef.SetActive(false);
             stopwatch.SetActive(false);
             starcomplete.SetActive(true);
             //coger tiempo y mostrar/calcular
@@ -362,6 +365,7 @@ public class character : MonoBehaviour
             collectable = PlayerPrefs.GetInt(savecollect, 0);
             if( timerfinish < timerminimum ) {
                 startime.SetActive(true);
+                startimef.SetActive(false);
             }
             if(collectable == 1) {
                 starcollect.SetActive(true);
