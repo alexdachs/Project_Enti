@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class botones : MonoBehaviour
 {
+    private GameMaster gm;
+    private void Start()
+    {
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+    }
     public void menu () {
         SceneManager.LoadScene("Menu");
     }
@@ -29,15 +34,19 @@ public class botones : MonoBehaviour
     }
     //Selector niveles
     public void lvl1 () {
+        gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Tutorial");
     }
     public void lvl2 () {
+        gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_1");
     }
     public void lvl3 () {
+        gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_2");
     }
     public void lvl4 () {
+        gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_3");
     }
     

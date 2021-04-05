@@ -41646,6 +41646,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: End Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2694964828237374666, guid: 11315597e24178641ad1a20063878231,
+        type: 3}
+      propertyPath: m_TagString
+      value: endlevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11315597e24178641ad1a20063878231, type: 3}
 --- !u!1001 &1322832860
