@@ -17,6 +17,25 @@ MonoBehaviour:
   moveSpots:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!95 &7195062063271445763
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5735478000174209720}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a018ce3bab538d44864e809af2ec12c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &219637293474121846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83,7 +102,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ea2787d393545624eb5a68ff97419ab3,
+      objectReference: {fileID: -8296385383580801948, guid: 4c3f0e44cbbc02b44aea494defc7d97a,
         type: 3}
     - target: {fileID: 5518259941804577486, guid: 49b1813ee8103e24d9f003a5bc807e45,
         type: 3}
