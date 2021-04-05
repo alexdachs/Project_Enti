@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class character : MonoBehaviour
 {
+    public AudioSource dashSound;
+    private AudioSource runSound;
     private Rigidbody2D player;
     private BoxCollider2D playerBox;
     public GameObject checkpoint;
@@ -24,7 +26,7 @@ public class character : MonoBehaviour
     public bool ground;
 
     public bool changeGravity = false;
-    private float gravityForce = 40.0f;
+    //private float gravityForce = 40.0f;
     public bool stayTop = false;
 
 
@@ -80,12 +82,19 @@ public class character : MonoBehaviour
         anim = GetComponent<Animator>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPoint;
+        runSound = GetComponent<AudioSource>();
+        dashSound = GameObject.FindGameObjectWithTag("dashSound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         stopWatchCalcul();
+
+        if (!ground)
+        {
+            runSound.Play();
+        }
 
         if (Input.GetButtonDown ("Jump")) // Salto
         {
@@ -419,7 +428,7 @@ public class character : MonoBehaviour
         seconds = (int)(timer % 60);
         minutes = (int)((timer / 60) % 60);
         hours = (int)(timer / 3600);
-        stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
+       // stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
 
     }
     // public void SetFloat (float savetimer, float filetimer) {
