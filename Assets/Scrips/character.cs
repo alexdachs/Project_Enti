@@ -21,8 +21,8 @@ public class character : MonoBehaviour
     private bool isDead = false;
 
     private const float stop = 0f;
-    private const float move = 150.0f;
-    public float speed = 150.0f;
+    private const float move = 300.0f;
+    public float speed = 300.0f;
     public float jumpPower = 200.0f;
     public bool ground;
 
@@ -469,7 +469,7 @@ public class character : MonoBehaviour
         seconds = (int)(timer % 60);
         minutes = (int)((timer / 60) % 60);
         hours = (int)(timer / 3600);
-        stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
+     //   stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
 
     }
     // public void SetFloat (float savetimer, float filetimer) {

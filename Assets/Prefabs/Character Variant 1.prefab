@@ -274,7 +274,7 @@ MonoBehaviour:
   isDashing: 0
   isAttacking: 0
   dashCoolDown: 0.5
-  speed: 150
+  speed: 300
   jumpPower: 200
   ground: 0
   changeGravity: 0
