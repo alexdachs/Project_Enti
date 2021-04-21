@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0.3
+  cam: {fileID: 0}
 --- !u!1 &854698779
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0.5
+  cam: {fileID: 0}
 --- !u!1 &977889805
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxEffect: 0.8
+  cam: {fileID: 0}
 --- !u!1 &1896355559
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +929,8 @@ AudioSource:
   m_GameObject: {fileID: 1758454922675641393}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 3f3c621c13089a5419b809407fda6551,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 876e18cd4b6eb0e4c970f86966c357c5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.03
