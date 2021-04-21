@@ -156,9 +156,9 @@ public class character : MonoBehaviour
         {
             isinmortal = true;
         }
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            SceneManager.LoadScene("Menu");
-        }
+        // if(Input.GetKeyDown(KeyCode.Escape)){
+        //     SceneManager.LoadScene("Menu");
+        // }
     }
 
     private void FixedUpdate()
