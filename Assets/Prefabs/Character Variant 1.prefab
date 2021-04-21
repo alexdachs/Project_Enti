@@ -274,7 +274,7 @@ MonoBehaviour:
   isDashing: 0
   isAttacking: 0
   dashCoolDown: 0.5
-  speed: 100
+  speed: 150
   jumpPower: 200
   ground: 0
   changeGravity: 0
@@ -285,6 +285,8 @@ MonoBehaviour:
   levelcomplet: {fileID: 0}
   starcomplete: {fileID: 0}
   startime: {fileID: 0}
+  starcompletef: {fileID: 0}
+  startimef: {fileID: 0}
   starcollect: {fileID: 0}
   stopwatch: {fileID: 0}
   timefinish: {fileID: 0}

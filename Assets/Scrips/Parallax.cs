@@ -7,6 +7,7 @@ public class Parallax : MonoBehaviour
     private float lenght;
     private float startPos;
     public float parallaxEffect;
+    public GameObject cam;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +19,8 @@ public class Parallax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float temp = (Camera.main.transform.position.x * (1 - parallaxEffect));
-        float dist = (Camera.main.transform.position.x * parallaxEffect);
+        float temp = (cam.transform.position.x * (1 - parallaxEffect));
+        float dist = (cam.transform.position.x * parallaxEffect);
 
         transform.position = new Vector3(startPos + dist, transform.position.y, transform.position.z);
 

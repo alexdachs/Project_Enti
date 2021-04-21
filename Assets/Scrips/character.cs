@@ -21,8 +21,8 @@ public class character : MonoBehaviour
     private bool isDead = false;
 
     private const float stop = 0f;
-    private const float move = 100.0f;
-    public float speed = 100.0f;
+    private const float move = 150.0f;
+    public float speed = 150.0f;
     public float jumpPower = 200.0f;
     public bool ground;
 
