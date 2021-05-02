@@ -15,6 +15,7 @@ public class RangeEnemy : MonoBehaviour
     public float shootDistance = 100.0f;
 
 
+
     public Transform[] moveSpots;
     private int randomSpot;
 

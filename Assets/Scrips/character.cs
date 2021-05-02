@@ -11,6 +11,7 @@ public class character : MonoBehaviour
     private Rigidbody2D player;
     private BoxCollider2D playerBox;
     public GameObject checkpoint;
+    public GameObject lvlManager;
     private GameMaster gm;
 
     public float dashDistance = 200.0f;
@@ -25,6 +26,21 @@ public class character : MonoBehaviour
     public float speed = 300.0f;
     public float jumpPower = 200.0f;
     public bool ground;
+
+    //Spawn lvl controll
+    private int lvlNumber = 1;
+    public string lvlString;
+    private int lvlX = 6000;
+    public bool firstSpawn;
+    public bool spawn;
+    public float currentTimelvl;
+    private float timebtwLvls = 5.0f;
+    //SpeedBoost
+    private float speedBoost = 50.0f;
+    private float speedBoostX = 4000;
+    private bool speedBoostActivate;
+    private float timebtwBoost = 5.0f;
+    private float currentBoostTime;
 
     private float deadTime;
     private bool endLevel = false;
@@ -90,16 +106,66 @@ public class character : MonoBehaviour
         transform.position = gm.lastCheckPoint;
         runSound = GetComponent<AudioSource>();
         dashSound = GameObject.FindGameObjectWithTag("dashSound").GetComponent<AudioSource>();
+        currentTimelvl = timebtwLvls;
     }
 
     // Update is called once per frame
     void Update()
     {
         stopWatchCalcul();
+        lvlString = lvlNumber.ToString();
+        //Spawn lvls
+        if (transform.position.x > 2000 && transform.position.x < 2100 && currentTimelvl <=0)
+        {
+            firstSpawn = true;
+            currentTimelvl = timebtwLvls;
+            lvlNumber = Random.Range(1, 5);
+            lvlString = lvlNumber.ToString();
+        }
+        else
+        {
+            currentTimelvl -= Time.deltaTime;
+        }
+        if (transform.position.x > lvlX && transform.position.x < lvlX+100 && currentTimelvl <=0)
+        {
+            spawn = true;
+            currentTimelvl = timebtwLvls;
+            lvlNumber = Random.Range(1, 5);
+            lvlString = lvlNumber.ToString();
+        }
+        if (firstSpawn)
+        {
+            lvlManager.GetComponent<LevelManager>().instanciaPrefab(lvlString);
+            firstSpawn = false;
+        }
+        if (spawn)
+        {
+            lvlManager.GetComponent<LevelManager>().instanciaPrefab(lvlString);
+            lvlX += 4000;
+            spawn = false;
+        }
+        if (transform.position.x > speedBoostX && transform.position.x < speedBoostX + 100 && currentBoostTime <= 0)
+        {
+            speedBoostActivate = true;
+            currentBoostTime = timebtwBoost;
+        }
+        else
+        {
+            currentBoostTime -= Time.deltaTime;
+        }
+        if (speedBoostActivate)
+        {
+            speed += speedBoost;
+            speedBoostX += speedBoostX;
+            speedBoostActivate = false;
+        }
 
+
+
+        //Player
         if (!ground && !endLevel && !isDead)
         {
-            runSound.Play();
+            //runSound.Play();
         }
 
         if (isDead)
@@ -254,7 +320,7 @@ public class character : MonoBehaviour
         }
         if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
         {
-            runSound.Stop();
+            //runSound.Stop();
             anim.SetBool("death", true);
             ground = true;
             isDead = true;

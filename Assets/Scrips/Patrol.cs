@@ -10,13 +10,16 @@ public class Patrol : MonoBehaviour
 
     public Transform[] moveSpots;
     private int randomSpot;
-    
+
+    public float tamañoArray;
+
 
     // Start is called before the first frame update
     void Start()
     {
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
+        tamañoArray = moveSpots.Length;
     }
 
     // Update is called once per frame
