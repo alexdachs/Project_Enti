@@ -207,11 +207,13 @@ public class character : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S) && !isJumping) // Encogerse
         {
-            player.transform.localScale = new Vector3(1, 0.65f, 1);
+            player.transform.localScale = new Vector3(1, 0.90f, 1);
+            anim.SetBool("slide", true);
         }
         if (Input.GetKeyUp(KeyCode.S)) // Volver al tamaño normal
         {
             player.transform.localScale = new Vector3(1, 1, 1);
+            anim.SetBool("slide", false);
         }
         if (Input.GetKeyUp(KeyCode.R)) // Reset
         {
