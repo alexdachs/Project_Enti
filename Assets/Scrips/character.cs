@@ -113,54 +113,57 @@ public class character : MonoBehaviour
     void Update()
     {
         stopWatchCalcul();
-        lvlString = lvlNumber.ToString();
-        //Spawn lvls
-        if (transform.position.x > 2000 && transform.position.x < 2100 && currentTimelvl <=0)
-        {
-            firstSpawn = true;
-            currentTimelvl = timebtwLvls;
-            lvlNumber = Random.Range(1, 7);
-            lvlString = lvlNumber.ToString();
-        }
-        else
-        {
-            currentTimelvl -= Time.deltaTime;
-        }
-        if (transform.position.x > lvlX && transform.position.x < lvlX+100 && currentTimelvl <=0)
-        {
-            spawn = true;
-            currentTimelvl = timebtwLvls;
-            lvlNumber = Random.Range(1, 7);
-            lvlString = lvlNumber.ToString();
-        }
-        if (firstSpawn)
-        {
-            lvlManager.GetComponent<LevelManager>().instanciaPrefab(lvlString);
-            firstSpawn = false;
-        }
-        if (spawn)
-        {
-            lvlManager.GetComponent<LevelManager>().instanciaPrefab(lvlString);
-            lvlX += 4000;
-            spawn = false;
-        }
-        if (transform.position.x > speedBoostX && transform.position.x < speedBoostX + 100 && currentBoostTime <= 0)
-        {
-            speedBoostActivate = true;
-            currentBoostTime = timebtwBoost;
-        }
-        else
-        {
-            currentBoostTime -= Time.deltaTime;
-        }
-        if (speedBoostActivate)
-        {
-            speed += speedBoost;
-            speedBoostX += speedBoostX;
-            speedBoostActivate = false;
-        }
 
-
+        //Level Manager
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Procedural"))
+        {
+            lvlString = lvlNumber.ToString();
+            //Spawn lvls
+            if (transform.position.x > 2000 && transform.position.x < 2100 && currentTimelvl <= 0)
+            {
+                firstSpawn = true;
+                currentTimelvl = timebtwLvls;
+                lvlNumber = Random.Range(1, 7);
+                lvlString = lvlNumber.ToString();
+            }
+            else
+            {
+                currentTimelvl -= Time.deltaTime;
+            }
+            if (transform.position.x > lvlX && transform.position.x < lvlX + 100 && currentTimelvl <= 0)
+            {
+                spawn = true;
+                currentTimelvl = timebtwLvls;
+                lvlNumber = Random.Range(1, 7);
+                lvlString = lvlNumber.ToString();
+            }
+            if (firstSpawn)
+            {
+                lvlManager.GetComponent<LevelManager>().instanciaPrefab(lvlString);
+                firstSpawn = false;
+            }
+            if (spawn)
+            {
+                lvlManager.GetComponent<LevelManager>().instanciaPrefab(lvlString);
+                lvlX += 4000;
+                spawn = false;
+            }
+            if (transform.position.x > speedBoostX && transform.position.x < speedBoostX + 100 && currentBoostTime <= 0)
+            {
+                speedBoostActivate = true;
+                currentBoostTime = timebtwBoost;
+            }
+            else
+            {
+                currentBoostTime -= Time.deltaTime;
+            }
+            if (speedBoostActivate)
+            {
+                speed += speedBoost;
+                speedBoostX += speedBoostX;
+                speedBoostActivate = false;
+            }
+        }
 
         //Player
         if (!ground && !endLevel && !isDead)
