@@ -37,7 +37,7 @@ public class character : MonoBehaviour
     private float timebtwLvls = 5.0f;
     //SpeedBoost
     private float speedBoost = 50.0f;
-    private float speedBoostX = 4000;
+    private float speedBoostX = 12000;
     private bool speedBoostActivate;
     private float timebtwBoost = 5.0f;
     private float currentBoostTime;
@@ -119,7 +119,7 @@ public class character : MonoBehaviour
         {
             firstSpawn = true;
             currentTimelvl = timebtwLvls;
-            lvlNumber = Random.Range(1, 5);
+            lvlNumber = Random.Range(1, 7);
             lvlString = lvlNumber.ToString();
         }
         else
@@ -130,7 +130,7 @@ public class character : MonoBehaviour
         {
             spawn = true;
             currentTimelvl = timebtwLvls;
-            lvlNumber = Random.Range(1, 5);
+            lvlNumber = Random.Range(1, 7);
             lvlString = lvlNumber.ToString();
         }
         if (firstSpawn)

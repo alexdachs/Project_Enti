@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(Resources.Load("5", typeof(GameObject)), new Vector3 (0,0,0), Quaternion.identity);
+        Instantiate(Resources.Load("7", typeof(GameObject)), new Vector3 (0,0,0), Quaternion.identity);
         //InvokeRepeating("instanciaPrefab", 1.0f, 1.0f);
     }
 
