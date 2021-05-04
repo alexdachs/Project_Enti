@@ -717,6 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed682923fae0b06458f88d93ab95d2e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
 --- !u!1001 &1464804078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -724,6 +725,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2273333341484213328, guid: 544e7ef69c230c340900b87268890bdc,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 3f3c621c13089a5419b809407fda6551,
+        type: 2}
     - target: {fileID: 2273333341484213330, guid: 544e7ef69c230c340900b87268890bdc,
         type: 3}
       propertyPath: m_Name
