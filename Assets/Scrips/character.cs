@@ -540,7 +540,7 @@ public class character : MonoBehaviour
         seconds = (int)(timer % 60);
         minutes = (int)((timer / 60) % 60);
         hours = (int)(timer / 3600);
-     //   stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
+        stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
 
     }
     // public void SetFloat (float savetimer, float filetimer) {

@@ -339,6 +339,10 @@ PrefabInstance:
       propertyPath: lvlManager
       value: 
       objectReference: {fileID: 1263509635}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: stopWatchText
+      value: 
+      objectReference: {fileID: 1862568129}
     - target: {fileID: 5343657126591580284, guid: 0ccd77512a376594fa857640c7cc40f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -401,3 +405,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+--- !u!114 &1862568129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2711478874631447976, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 1114660982}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
