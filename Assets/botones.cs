@@ -55,6 +55,7 @@ public class botones : MonoBehaviour
         Time.timeScale = 1f;
     }
     public void infinitlvl() {
+        gm.lastCheckPoint = new Vector3(0, 24, 0);
         SceneManager.LoadScene("Procedural");
         Time.timeScale = 1f;
     }
