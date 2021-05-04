@@ -60,7 +60,7 @@ public class character : MonoBehaviour
 
     //Animaciones
     private Animator anim;
-    
+
     //Stopwatch
     float timer;
     float seconds;
@@ -68,7 +68,7 @@ public class character : MonoBehaviour
     float hours;
 
     [SerializeField] Text stopWatchText;
-    
+
     //Guardados
     string filetimer;
     string savecollect;
@@ -106,8 +106,9 @@ public class character : MonoBehaviour
     bool tutokillbool;
     public GameObject tutomovement;
     bool tutomovementbool;
+    public GameObject tutogravity;
+    bool tutogravitybool;
 
-    
 
 
 
@@ -198,7 +199,7 @@ public class character : MonoBehaviour
             {
                 PlayerPrefs.SetFloat(filetimer, timer);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                
+
 
             }
         }
@@ -215,16 +216,25 @@ public class character : MonoBehaviour
         if (Input.GetButtonDown ("Jump")) // Salto
         {
             Jump();
-            if(tutojumpbool == true){
+            if(tutojumpbool == true || tutomovementbool == true){
+                tutojumpbool = false;
                 tutomovementbool = false;
                 Time.timeScale = 1f;
+                tutojump.SetActive(false);
                 tutomovement.SetActive(false);
-            }       
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.D)) // Dash
         {
             StartCoroutine(HelpDash());
+            if(tutodashbool == true || tutokillbool == true){
+                tutodashbool = false;
+                tutokillbool = false;
+                Time.timeScale = 1f;
+                tutodash.SetActive(false);
+                tutokill.SetActive(false);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.W)) // Cambio Gravedad
@@ -233,12 +243,22 @@ public class character : MonoBehaviour
             {
                 GravityChange();
             }
+            if(tutogravitybool == true){
+                tutogravitybool = false;
+                Time.timeScale = 1f;
+                tutogravity.SetActive(false);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.S) && !isJumping) // Encogerse
         {
             player.transform.localScale = new Vector3(1, 0.90f, 1);
             anim.SetBool("slide", true);
+            if(tutoslidebool == true){
+                tutoslidebool = false;
+                Time.timeScale = 1f;
+                tutoslide.SetActive(false);
+            }
         }
         if (Input.GetKeyUp(KeyCode.S)) // Volver al tamaño normal
         {
@@ -266,7 +286,7 @@ public class character : MonoBehaviour
         {
             player.velocity = new Vector2(speed * delta, player.velocity.y); // Movimiento constante
             anim.SetBool("move", true);
-        }   
+        }
     }
 
     void Jump()
@@ -450,17 +470,17 @@ public class character : MonoBehaviour
             stopwatch.SetActive(false);
             starcomplete.SetActive(true);
             //coger tiempo y mostrar/calcular
-            timerfinish = PlayerPrefs.GetFloat(filetimer, 0);            
+            timerfinish = PlayerPrefs.GetFloat(filetimer, 0);
             secondsf = (int)(timerfinish % 60);
             minutesf = (int)((timerfinish / 60) % 60);
             hoursf = (int)(timerfinish / 3600);
             timefinish.text = hoursf.ToString("00") + ":" + minutesf.ToString("00") + ":" + secondsf.ToString("00");
-            
+
             secondsm = (int)(timerminimum % 60);
             minutesm = (int)((timerminimum / 60) % 60);
             hoursm = (int)(timerminimum / 3600);
             minimumtime.text = hoursm.ToString("00") + ":" + minutesm.ToString("00") + ":" + secondsm.ToString("00");
-           
+
             collectable = PlayerPrefs.GetInt(savecollect, 0);
             if( timerfinish < timerminimum ) {
                 startime.SetActive(true);
@@ -473,12 +493,37 @@ public class character : MonoBehaviour
             }
             PlayerPrefs.DeleteKey(filetimer);
             PlayerPrefs.DeleteKey(savecollect);
-    
+
         }
         //mensajes tutorial
         if(col.gameObject.tag == "tutomovement") {
             tutomovement.SetActive(true);
             tutomovementbool = true;
+            Time.timeScale = 0f;
+        }
+        if(col.gameObject.tag == "tutojump") {
+            tutojump.SetActive(true);
+            tutojumpbool = true;
+            Time.timeScale = 0f;
+        }
+        if(col.gameObject.tag == "tutodash") {
+            tutodash.SetActive(true);
+            tutodashbool = true;
+            Time.timeScale = 0f;
+        }
+        if(col.gameObject.tag == "tutokill") {
+            tutokill.SetActive(true);
+            tutokillbool = true;
+            Time.timeScale = 0f;
+        }
+        if(col.gameObject.tag == "tutoslide") {
+            tutoslide.SetActive(true);
+            tutoslidebool = true;
+            Time.timeScale = 0f;
+        }
+        if(col.gameObject.tag == "tutogravity") {
+            tutogravity.SetActive(true);
+            tutogravitybool = true;
             Time.timeScale = 0f;
         }
     }
