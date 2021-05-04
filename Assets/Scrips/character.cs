@@ -213,10 +213,11 @@ public class character : MonoBehaviour
             anim.SetBool("jump", false);
         }
 
-        if (Input.GetButtonDown ("Jump")) // Salto
+        if (Input.GetButtonDown("Jump")) // Salto
         {
             Jump();
-            if(tutojumpbool == true || tutomovementbool == true){
+            if (tutojumpbool == true || tutomovementbool == true)
+            {
                 tutojumpbool = false;
                 tutomovementbool = false;
                 Time.timeScale = 1f;
@@ -228,7 +229,8 @@ public class character : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D)) // Dash
         {
             StartCoroutine(HelpDash());
-            if(tutodashbool == true || tutokillbool == true){
+            if (tutodashbool == true || tutokillbool == true)
+            {
                 tutodashbool = false;
                 tutokillbool = false;
                 Time.timeScale = 1f;
@@ -237,34 +239,73 @@ public class character : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.W)) // Cambio Gravedad
+        if (!stayTop)
         {
-            if (!isAttacking)
+            if (Input.GetKeyDown(KeyCode.W)) // Cambio Gravedad
             {
-                GravityChange();
+                if (!isAttacking)
+                {
+                    GravityChange();
+                }
+                if (tutogravitybool == true)
+                {
+                    tutogravitybool = false;
+                    Time.timeScale = 1f;
+                    tutogravity.SetActive(false);
+                }
             }
-            if(tutogravitybool == true){
-                tutogravitybool = false;
-                Time.timeScale = 1f;
-                tutogravity.SetActive(false);
+
+            if (Input.GetKeyDown(KeyCode.S) && !isJumping) // Encogerse
+            {
+                player.transform.localScale = new Vector3(1, 0.90f, 1);
+                anim.SetBool("slide", true);
+                if (tutoslidebool == true)
+                {
+                    tutoslidebool = false;
+                    Time.timeScale = 1f;
+                    tutoslide.SetActive(false);
+                }
+            }
+            if (Input.GetKeyUp(KeyCode.S)) // Volver al tamaño normal
+            {
+                player.transform.localScale = new Vector3(1, 1, 1);
+                anim.SetBool("slide", false);
+            }
+        }
+        if (stayTop)
+        {
+            if (Input.GetKeyDown(KeyCode.S)) // Cambio Gravedad
+            {
+                if (!isAttacking)
+                {
+                    GravityChange();
+                }
+                if (tutogravitybool == true)
+                {
+                    tutogravitybool = false;
+                    Time.timeScale = 1f;
+                    tutogravity.SetActive(false);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.W) && !isJumping) // Encogerse
+            {
+                player.transform.localScale = new Vector3(1, 0.90f, 1);
+                anim.SetBool("slide", true);
+                if (tutoslidebool == true)
+                {
+                    tutoslidebool = false;
+                    Time.timeScale = 1f;
+                    tutoslide.SetActive(false);
+                }
+            }
+            if (Input.GetKeyUp(KeyCode.W)) // Volver al tamaño normal
+            {
+                player.transform.localScale = new Vector3(1, 1, 1);
+                anim.SetBool("slide", false);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && !isJumping) // Encogerse
-        {
-            player.transform.localScale = new Vector3(1, 0.90f, 1);
-            anim.SetBool("slide", true);
-            if(tutoslidebool == true){
-                tutoslidebool = false;
-                Time.timeScale = 1f;
-                tutoslide.SetActive(false);
-            }
-        }
-        if (Input.GetKeyUp(KeyCode.S)) // Volver al tamaño normal
-        {
-            player.transform.localScale = new Vector3(1, 1, 1);
-            anim.SetBool("slide", false);
-        }
         if (Input.GetKeyUp(KeyCode.R)) // Reset
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
