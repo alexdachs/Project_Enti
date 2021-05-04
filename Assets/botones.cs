@@ -12,6 +12,7 @@ public class botones : MonoBehaviour
     }
     public void menu () {
         SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f;
     }
     public void recargartuto () {
         SceneManager.LoadScene("Tutorial");
@@ -48,6 +49,10 @@ public class botones : MonoBehaviour
     public void lvl4 () {
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_3");
+    }
+    public void infinitlvl() {
+        SceneManager.LoadScene("Procedural");
+        Time.timeScale = 1f;
     }
 
 }
