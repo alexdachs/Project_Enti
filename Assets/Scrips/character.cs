@@ -188,7 +188,7 @@ public class character : MonoBehaviour
         //Player
         if (!ground && !endLevel && !isDead)
         {
-            //runSound.Play();
+            runSound.Play();
         }
 
         if (isDead)
@@ -372,7 +372,7 @@ public class character : MonoBehaviour
         }
         if (col.gameObject.tag == "trap") //Muerte por ''trampa'' y vuelta al inicio
         {
-            //runSound.Stop();
+            runSound.Stop();
             anim.SetBool("death", true);
             ground = true;
             isDead = true;
