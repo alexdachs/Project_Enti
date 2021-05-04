@@ -72,6 +72,7 @@ public class character : MonoBehaviour
     //Guardados
     string filetimer;
     string savecollect;
+    string savehighscore;
 
     //Level complete
     public GameObject levelcomplet;
@@ -93,6 +94,13 @@ public class character : MonoBehaviour
     float hoursm;
     public GameObject collectableyes;
     public GameObject collectableno;
+    //level complete procedural
+    public Text timehighscore;
+    public Text timefinal;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -174,10 +182,13 @@ public class character : MonoBehaviour
         if (isDead)
         {
             deadTime += Time.deltaTime;
+
             if (deadTime >= 1.6f)
             {
                 PlayerPrefs.SetFloat(filetimer, timer);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                
+
             }
         }
 
