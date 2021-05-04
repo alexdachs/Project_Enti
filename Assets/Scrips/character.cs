@@ -94,6 +94,19 @@ public class character : MonoBehaviour
     float hoursm;
     public GameObject collectableyes;
     public GameObject collectableno;
+
+    //mensajes tutorial
+    public GameObject tutojump;
+    bool tutojumpbool;
+    public GameObject tutodash;
+    bool tutodashbool;
+    public GameObject tutoslide;
+    bool tutoslidebool;
+    public GameObject tutokill;
+    bool tutokillbool;
+    public GameObject tutomovement;
+    bool tutomovementbool;
+
     
 
 
@@ -201,7 +214,12 @@ public class character : MonoBehaviour
 
         if (Input.GetButtonDown ("Jump")) // Salto
         {
-            Jump();       
+            Jump();
+            if(tutojumpbool = true){
+                tutomovementbool = false;
+                Time.timeScale = 1f;
+                tutomovement.SetActive(false);
+            }       
         }
 
         if (Input.GetKeyDown(KeyCode.D)) // Dash
@@ -423,6 +441,7 @@ public class character : MonoBehaviour
             PlayerPrefs.SetInt(savecollect, collectable);
         }
         if(col.gameObject.tag == "endlevel") {
+            Time.timeScale = 0f;
             runSound.Stop();
             endLevel = true;
             PlayerPrefs.SetFloat(filetimer, timer);
@@ -454,7 +473,13 @@ public class character : MonoBehaviour
             }
             PlayerPrefs.DeleteKey(filetimer);
             PlayerPrefs.DeleteKey(savecollect);
-
+    
+        }
+        //mensajes tutorial
+        if(col.gameObject.tag == "tutomovement") {
+            tutomovement.SetActive(true);
+            tutomovementbool = true;
+            Time.timeScale = 0f;
         }
     }
 

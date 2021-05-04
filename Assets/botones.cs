@@ -37,18 +37,22 @@ public class botones : MonoBehaviour
     public void lvl1 () {
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Tutorial");
+        Time.timeScale = 1f;
     }
     public void lvl2 () {
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_1");
+        Time.timeScale = 1f;
     }
     public void lvl3 () {
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_2");
+        Time.timeScale = 1f;
     }
     public void lvl4 () {
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_3");
+        Time.timeScale = 1f;
     }
     public void infinitlvl() {
         SceneManager.LoadScene("Procedural");

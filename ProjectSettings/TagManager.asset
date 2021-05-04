@@ -24,6 +24,11 @@ TagManager:
   - activator
   - endlevel
   - dashSound
+  - tutojump
+  - tutodash
+  - tutokill
+  - tutoslide
+  - tutomovement
   layers:
   - Default
   - TransparentFX
