@@ -215,7 +215,7 @@ public class character : MonoBehaviour
         if (Input.GetButtonDown ("Jump")) // Salto
         {
             Jump();
-            if(tutojumpbool = true){
+            if(tutojumpbool == true){
                 tutomovementbool = false;
                 Time.timeScale = 1f;
                 tutomovement.SetActive(false);
