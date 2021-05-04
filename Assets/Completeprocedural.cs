@@ -8,7 +8,7 @@ public class Completeprocedural : MonoBehaviour
 
     //Level complete procedural
     public GameObject levelcompletpd;
-    public GameObject textnewhighscore;
+    
 
 
 

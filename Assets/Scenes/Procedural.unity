@@ -655,6 +655,26 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1733169414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2711478874723039080, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 1114660982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1733169415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733169414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44388070f041a594d9937f186b5f3d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelcompletpd: {fileID: 1368032610}
+  textnewhighscore: {fileID: 0}
 --- !u!1 &1767977313
 GameObject:
   m_ObjectHideFlags: 0

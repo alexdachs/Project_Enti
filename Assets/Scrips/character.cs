@@ -95,6 +95,7 @@ public class character : MonoBehaviour
     public GameObject collectableyes;
     public GameObject collectableno;
     //level complete procedural
+    public GameObject textnewhighscore;
     public Text timehighscore;
     public Text timefinal;
 
