@@ -20,6 +20,9 @@ public class botones : MonoBehaviour
     public void siguientenivel () {
         SceneManager.LoadScene("Level_1");
     }
+    public void Victory () {
+        SceneManager.LoadScene("Victory");
+    }
     //Controles menu
     public void play () {
         SceneManager.LoadScene("Levels");
@@ -52,6 +55,11 @@ public class botones : MonoBehaviour
     public void lvl4 () {
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_3");
+        Time.timeScale = 1f;
+    }
+    public void lvl5 () {
+        gm.lastCheckPoint = new Vector3(-270, -143, 0);
+        SceneManager.LoadScene("Level_4");
         Time.timeScale = 1f;
     }
     public void infinitlvl() {

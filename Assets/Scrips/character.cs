@@ -73,7 +73,7 @@ public class character : MonoBehaviour
     string filetimer;
     string savecollect;
     string savehighscore;
-    string savedeaths;
+    //string savedeaths;
     
 
     //Level complete
@@ -96,8 +96,8 @@ public class character : MonoBehaviour
     float hoursm;
     public GameObject collectableyes;
     public GameObject collectableno;
-    public Text deathcount;
-    int deaths;
+    //public Text deathcount;
+    //int deaths;
 
     //mensajes tutorial
     public GameObject tutojump;
@@ -422,8 +422,8 @@ public class character : MonoBehaviour
             anim.SetBool("death", true);
             ground = true;
             isDead = true;
-            deaths =  +1;
-            PlayerPrefs.SetInt(savedeaths, deaths);
+            //deaths =  +1;
+            //PlayerPrefs.SetInt(savedeaths, deaths);
         }
         if (col.gameObject.tag == "Finish")
         {
@@ -467,8 +467,8 @@ public class character : MonoBehaviour
                 runSound.Stop();
                 anim.SetBool("death", true);
                 isDead = true;
-                deaths =  +1;
-                PlayerPrefs.SetInt(savedeaths, deaths);
+                // deaths =  +1;
+                // PlayerPrefs.SetInt(savedeaths, deaths);
             }
 
         }
@@ -531,11 +531,11 @@ public class character : MonoBehaviour
             hoursm = (int)(timerminimum / 3600);
             minimumtime.text = hoursm.ToString("00") + ":" + minutesm.ToString("00") + ":" + secondsm.ToString("00");
 
-            deathcount.text = deaths.ToString("00");
+            //deathcount.text = deaths.ToString("00");
 
             //collectable = PlayerPrefs.GetInt(savecollect, 0);
             //deaths = PlayerPrefs.GetInt(savedeaths, 0);
-            if( timerfinish < timerminimum ) {
+            if( timerfinish <= timerminimum ) {
                 startime.SetActive(true);
                 startimef.SetActive(false);
             }
@@ -546,7 +546,7 @@ public class character : MonoBehaviour
             }
             PlayerPrefs.DeleteKey(filetimer);
             PlayerPrefs.DeleteKey(savecollect);
-            PlayerPrefs.DeleteKey(savedeaths);
+            //PlayerPrefs.DeleteKey(savedeaths);
 
         }
         //mensajes tutorial

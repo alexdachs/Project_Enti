@@ -275,6 +275,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e41b195946c5ec241855128362b1c349, type: 3}
+--- !u!1001 &58852475
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5438612788924093747, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_Name
+      value: Checkpoint Variant (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5158
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -106
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513211134211226749, guid: 890ed2f9c8871e049971c9fa147715c8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 872.9921
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 890ed2f9c8871e049971c9fa147715c8, type: 3}
 --- !u!1001 &139099907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -556,7 +630,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &286762252
 PrefabInstance:
@@ -62910,6 +62984,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656011173188372613, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: lvl5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268762512032792231, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: lvl5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563410366093296499, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Victory
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74f1ecc1bfe9dd24999b9595a00283ce, type: 3}
