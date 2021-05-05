@@ -1314,15 +1314,15 @@ MonoBehaviour:
   m_FillRect: {fileID: 921149927}
   m_HandleRect: {fileID: 250002571}
   m_Direction: 0
-  m_MinValue: -40
-  m_MaxValue: 40
+  m_MinValue: -100
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1864412695}
-        m_MethodName: SetVolume
+        m_MethodName: SetVolumeFX
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2314,6 +2314,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960176544}
   m_CullTransparentMesh: 0
+--- !u!1001 &1972626698
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4172823775681464584, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 120.96763
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172823775681464584, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 38.92712
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172823775681464584, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -44.913292
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172823775681464584, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172823775681464584, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172823775681464584, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172823775681464584, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172823775681464584, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172823775681464584, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172823775681464584, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172823775681464584, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748304557668297697, guid: 56fad74de9cc5f14186cc11d0addfd5b,
+        type: 3}
+      propertyPath: m_Name
+      value: Game Master
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56fad74de9cc5f14186cc11d0addfd5b, type: 3}
 --- !u!1 &2029031184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,7 +2843,17 @@ PrefabInstance:
     - target: {fileID: 6470249825960686477, guid: bf59e9dcd247455408a64d375b8c8e03,
         type: 3}
       propertyPath: m_MaxValue
-      value: 40
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470249825960686477, guid: bf59e9dcd247455408a64d375b8c8e03,
+        type: 3}
+      propertyPath: m_MinValue
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470249825960686477, guid: bf59e9dcd247455408a64d375b8c8e03,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetVolumeMusic
       objectReference: {fileID: 0}
     - target: {fileID: 6470249825960686479, guid: bf59e9dcd247455408a64d375b8c8e03,
         type: 3}

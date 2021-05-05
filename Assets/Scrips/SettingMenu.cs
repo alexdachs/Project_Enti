@@ -39,10 +39,13 @@ public AudioMixer audioFX;
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
-    public void SetVolume (float volume) {
+    public void SetVolumeMusic (float volume) {
+        
         audioMusic.SetFloat("volume", volume);
-        audioFX.SetFloat("volume", volume);
     }
+    public void SetVolumeFX (float volumefx) {
+         audioFX.SetFloat("volumefx", volumefx);
+     }
     public void SetFullscreen (bool isFullscreen) {
         Screen.fullScreen = isFullscreen;
     }
