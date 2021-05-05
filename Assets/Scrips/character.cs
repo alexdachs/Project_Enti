@@ -243,6 +243,10 @@ public class character : MonoBehaviour
                 tutokill.SetActive(false);
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            runSound.Stop();
+        }
 
         if (!stayTop)
         {
