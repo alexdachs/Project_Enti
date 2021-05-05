@@ -346,7 +346,7 @@ public class character : MonoBehaviour
                     isJumping = true;
                     player.velocity = new Vector2(player.velocity.x, -jumpPower);
                 }
-                else
+                /*else
                 {
                     if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
                     {
@@ -364,7 +364,7 @@ public class character : MonoBehaviour
                     player.velocity = new Vector2(speed, player.velocity.y);
                     isJumping = true;
                     player.velocity = new Vector2(player.velocity.x, -jumpPower);
-                }
+                }*/
             }
             else // Salto normal
             {
@@ -373,7 +373,7 @@ public class character : MonoBehaviour
                     isJumping = true;
                     player.velocity = new Vector2(player.velocity.x, jumpPower);
                 }
-                else
+               /* else
                 {
                     if (goingLeft) // Cambio de variable de dirección a la que vas (para el dash)
                     {
@@ -391,7 +391,7 @@ public class character : MonoBehaviour
                     player.velocity = new Vector2(speed, player.velocity.y);
                     isJumping = true;
                     player.velocity = new Vector2(player.velocity.x, jumpPower);
-                }
+                }*/
             }
         }
     }
