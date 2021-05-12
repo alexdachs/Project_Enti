@@ -144,7 +144,7 @@ public class character : MonoBehaviour
         {
             lvlString = lvlNumber.ToString();
             //Spawn lvls
-            if (transform.position.x > 2000 && transform.position.x < 2100 && currentTimelvl <= 0)
+            if (transform.position.x > 2000 && transform.position.x < 2200 && currentTimelvl <= 0)
             {
                 firstSpawn = true;
                 currentTimelvl = timebtwLvls;
@@ -155,7 +155,7 @@ public class character : MonoBehaviour
             {
                 currentTimelvl -= Time.deltaTime;
             }
-            if (transform.position.x > lvlX && transform.position.x < lvlX + 100 && currentTimelvl <= 0)
+            if (transform.position.x > lvlX && transform.position.x < lvlX + 200 && currentTimelvl <= 0)
             {
                 spawn = true;
                 currentTimelvl = timebtwLvls;
