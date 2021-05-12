@@ -31230,6 +31230,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1837142110843461509, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837142110843461509, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837142110843461509, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837142110981894813, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837142110981894813, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837142110981894813, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711478874723039085, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711478874723039085, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711478874723039085, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 4563410366093296499, guid: 74f1ecc1bfe9dd24999b9595a00283ce,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
