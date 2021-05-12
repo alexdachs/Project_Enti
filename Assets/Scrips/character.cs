@@ -99,20 +99,6 @@ public class character : MonoBehaviour
     //public Text deathcount;
     //int deaths;
 
-    //mensajes tutorial
-    public GameObject tutojump;
-    bool tutojumpbool;
-    public GameObject tutodash;
-    bool tutodashbool;
-    public GameObject tutoslide;
-    bool tutoslidebool;
-    public GameObject tutokill;
-    bool tutokillbool;
-    public GameObject tutomovement;
-    bool tutomovementbool;
-    public GameObject tutogravity;
-    bool tutogravitybool;
-
 
 
 
@@ -221,27 +207,11 @@ public class character : MonoBehaviour
         if (Input.GetButtonDown("Jump")) // Salto
         {
             Jump();
-            if (tutojumpbool == true || tutomovementbool == true)
-            {
-                tutojumpbool = false;
-                tutomovementbool = false;
-                Time.timeScale = 1f;
-                tutojump.SetActive(false);
-                tutomovement.SetActive(false);
-            }
         }
 
         if (Input.GetKeyDown(KeyCode.D)) // Dash
         {
             StartCoroutine(HelpDash());
-            if (tutodashbool == true || tutokillbool == true)
-            {
-                tutodashbool = false;
-                tutokillbool = false;
-                Time.timeScale = 1f;
-                tutodash.SetActive(false);
-                tutokill.SetActive(false);
-            }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -256,24 +226,12 @@ public class character : MonoBehaviour
                 {
                     GravityChange();
                 }
-                if (tutogravitybool == true)
-                {
-                    tutogravitybool = false;
-                    Time.timeScale = 1f;
-                    tutogravity.SetActive(false);
-                }
             }
 
             if (Input.GetKeyDown(KeyCode.S) && !isJumping) // Encogerse
             {
                 player.transform.localScale = new Vector3(1, 0.90f, 1);
                 anim.SetBool("slide", true);
-                if (tutoslidebool == true)
-                {
-                    tutoslidebool = false;
-                    Time.timeScale = 1f;
-                    tutoslide.SetActive(false);
-                }
             }
             if (Input.GetKeyUp(KeyCode.S)) // Volver al tamaño normal
             {
@@ -289,24 +247,12 @@ public class character : MonoBehaviour
                 {
                     GravityChange();
                 }
-                if (tutogravitybool == true)
-                {
-                    tutogravitybool = false;
-                    Time.timeScale = 1f;
-                    tutogravity.SetActive(false);
-                }
             }
 
             if (Input.GetKeyDown(KeyCode.W) && !isJumping) // Encogerse
             {
                 player.transform.localScale = new Vector3(1, 0.90f, 1);
                 anim.SetBool("slide", true);
-                if (tutoslidebool == true)
-                {
-                    tutoslidebool = false;
-                    Time.timeScale = 1f;
-                    tutoslide.SetActive(false);
-                }
             }
             if (Input.GetKeyUp(KeyCode.W)) // Volver al tamaño normal
             {
@@ -554,36 +500,7 @@ public class character : MonoBehaviour
 
         }
         //mensajes tutorial
-        if(col.gameObject.tag == "tutomovement") {
-            tutomovement.SetActive(true);
-            tutomovementbool = true;
-            Time.timeScale = 0f;
-        }
-        if(col.gameObject.tag == "tutojump") {
-            tutojump.SetActive(true);
-            tutojumpbool = true;
-            Time.timeScale = 0f;
-        }
-        if(col.gameObject.tag == "tutodash") {
-            tutodash.SetActive(true);
-            tutodashbool = true;
-            Time.timeScale = 0f;
-        }
-        if(col.gameObject.tag == "tutokill") {
-            tutokill.SetActive(true);
-            tutokillbool = true;
-            Time.timeScale = 0f;
-        }
-        if(col.gameObject.tag == "tutoslide") {
-            tutoslide.SetActive(true);
-            tutoslidebool = true;
-            Time.timeScale = 0f;
-        }
-        if(col.gameObject.tag == "tutogravity") {
-            tutogravity.SetActive(true);
-            tutogravitybool = true;
-            Time.timeScale = 0f;
-        }
+        
     }
 
     IEnumerator Dash(float direction)
