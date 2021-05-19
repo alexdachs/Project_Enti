@@ -474,12 +474,12 @@ public class character : MonoBehaviour
             secondsf = (int)(timerfinish % 60);
             minutesf = (int)((timerfinish / 60) % 60);
             hoursf = (int)(timerfinish / 3600);
-            timefinish.text = hoursf.ToString("00") + ":" + minutesf.ToString("00") + ":" + secondsf.ToString("00");
+            timefinish.text = hoursf.ToString("00 ") + ":" + minutesf.ToString(" 00 ") + ":" + secondsf.ToString(" 00 ");
 
             secondsm = (int)(timerminimum % 60);
             minutesm = (int)((timerminimum / 60) % 60);
             hoursm = (int)(timerminimum / 3600);
-            minimumtime.text = hoursm.ToString("00") + ":" + minutesm.ToString("00") + ":" + secondsm.ToString("00");
+            minimumtime.text = hoursm.ToString("00 ") + ":" + minutesm.ToString(" 00 ") + ":" + secondsm.ToString(" 00 ");
 
             //deathcount.text = deaths.ToString("00");
 
@@ -496,6 +496,7 @@ public class character : MonoBehaviour
             }
             PlayerPrefs.DeleteKey(filetimer);
             PlayerPrefs.DeleteKey(savecollect);
+            PlayerPrefs.DeleteAll();
             //PlayerPrefs.DeleteKey(savedeaths);
 
         }
@@ -594,7 +595,7 @@ public class character : MonoBehaviour
         seconds = (int)(timer % 60);
         minutes = (int)((timer / 60) % 60);
         hours = (int)(timer / 3600);
-        stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
+        stopWatchText.text = hours.ToString("00 ") + ":" + minutes.ToString(" 00 ") + ":" + seconds.ToString(" 00 ");
 
     }
 
