@@ -2772,6 +2772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4032450705674218648}
   - component: {fileID: 4032450705674218631}
+  - component: {fileID: 2706501724726136745}
   m_Layer: 0
   m_Name: Level clear
   m_TagString: Untagged
@@ -2861,6 +2862,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2706501724726136745
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032450705674218649}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81ee7a280d6c9e84c93a3e8172dfd1f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4032450705878381880
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,7 +3086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c07bcc2f32a38f45ace9776e8402f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelClearAnimator: {fileID: 0}
+  levelClearAnimator: {fileID: 2706501724726136745}
   playerTimeText: {fileID: 4032450704971492024}
   minTimeText: {fileID: 4032450704564361001}
   collectableText: {fileID: 4032450706019368660}

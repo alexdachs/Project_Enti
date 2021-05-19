@@ -21,5 +21,6 @@ public class LevelClearManager : MonoBehaviour
             if (collectable) {
                 collectableText.SetActive(true);
             }
+            levelClearAnimator.SetInteger("stars", stars);
     }
 }

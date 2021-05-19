@@ -90,7 +90,7 @@ public class character : MonoBehaviour
     float minutesf;
     float hoursf;
     public Text minimumtime;
-    float timerminimum = 90f;
+    public float timerminimum = 90f;
     float secondsm;
     float minutesm;
     float hoursm;
@@ -462,7 +462,6 @@ public class character : MonoBehaviour
             PlayerPrefs.SetFloat(savecollect, collectable);
         }
         if(col.gameObject.tag == "endlevel") {
-            Time.timeScale = 0f;
             runSound.Stop();
             endLevel = true;
             PlayerPrefs.SetFloat(filetimer, timer);
@@ -472,7 +471,6 @@ public class character : MonoBehaviour
             starcomplete.SetActive(true);
             //coger tiempo y mostrar/calcular
             timerfinish = PlayerPrefs.GetFloat(filetimer, 0);
-            levelClearManager.ShowLevelClear(1, timerfinish, timerminimum, collectable > 0);
             /* secondsf = (int)(timerfinish % 60);
             minutesf = (int)((timerfinish / 60) % 60);
             hoursf = (int)(timerfinish / 3600);
@@ -487,14 +485,16 @@ public class character : MonoBehaviour
 
             //collectable = PlayerPrefs.GetInt(savecollect, 0);
             //deaths = PlayerPrefs.GetInt(savedeaths, 0);
-            if( timerfinish <= timerminimum ) {
-                startime.SetActive(true);
-                startimef.SetActive(false);
+            if(collectable > 0 && timerfinish <= timerminimum) {
+                levelClearManager.ShowLevelClear(3, timerfinish, timerminimum, collectable > 0);
+
             }
-            if(collectable > 0) {
-                starcollect.SetActive(true);
-                collectableyes.SetActive(true);
-                collectableno.SetActive(false);
+            else if(timerfinish <= timerminimum) {
+                levelClearManager.ShowLevelClear(2, timerfinish, timerminimum, collectable > 0);
+            }
+            else {
+                levelClearManager.ShowLevelClear(1, timerfinish, timerminimum, collectable > 0);
+
             }
             PlayerPrefs.DeleteKey(filetimer);
             PlayerPrefs.DeleteKey(savecollect);
