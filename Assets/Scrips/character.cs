@@ -98,6 +98,7 @@ public class character : MonoBehaviour
     public GameObject collectableno;
     //public Text deathcount;
     //int deaths;
+    [SerializeField] LevelClearManager levelClearManager;
 
 
 
@@ -117,7 +118,7 @@ public class character : MonoBehaviour
         runSound = GetComponent<AudioSource>();
         dashSound = GameObject.FindGameObjectWithTag("dashSound").GetComponent<AudioSource>();
         currentTimelvl = timebtwLvls;
-        
+        levelClearManager = GameObject.FindObjectOfType<LevelClearManager>();
     }
 
     // Update is called once per frame
@@ -471,7 +472,8 @@ public class character : MonoBehaviour
             starcomplete.SetActive(true);
             //coger tiempo y mostrar/calcular
             timerfinish = PlayerPrefs.GetFloat(filetimer, 0);
-            secondsf = (int)(timerfinish % 60);
+            levelClearManager.ShowLevelClear(1, timerfinish, timerminimum, collectable > 0);
+            /* secondsf = (int)(timerfinish % 60);
             minutesf = (int)((timerfinish / 60) % 60);
             hoursf = (int)(timerfinish / 3600);
             timefinish.text = hoursf.ToString("00 ") + ":" + minutesf.ToString(" 00 ") + ":" + secondsf.ToString(" 00 ");
@@ -479,7 +481,7 @@ public class character : MonoBehaviour
             secondsm = (int)(timerminimum % 60);
             minutesm = (int)((timerminimum / 60) % 60);
             hoursm = (int)(timerminimum / 3600);
-            minimumtime.text = hoursm.ToString("00 ") + ":" + minutesm.ToString(" 00 ") + ":" + secondsm.ToString(" 00 ");
+            minimumtime.text = hoursm.ToString("00 ") + ":" + minutesm.ToString(" 00 ") + ":" + secondsm.ToString(" 00 ");*/
 
             //deathcount.text = deaths.ToString("00");
 
