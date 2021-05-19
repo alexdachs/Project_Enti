@@ -213,7 +213,7 @@ public class character : MonoBehaviour
         {
             StartCoroutine(HelpDash());
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             runSound.Stop();
         }
@@ -597,8 +597,5 @@ public class character : MonoBehaviour
         stopWatchText.text = hours.ToString("00") + ":" + minutes.ToString("00") + ":" + seconds.ToString("00");
 
     }
-    // public void SetFloat (float savetimer, float filetimer) {
-    //     PlayerPrefs.SetFloat(savetimer, filetimer);
-    // }
 
 }
