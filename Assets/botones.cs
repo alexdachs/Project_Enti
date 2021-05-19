@@ -41,31 +41,39 @@ public class botones : MonoBehaviour
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Tutorial");
         Time.timeScale = 1f;
+        PlayerPrefs.DeleteAll();
+
     }
     public void lvl2 () {
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_1");
         Time.timeScale = 1f;
+        PlayerPrefs.DeleteAll();
     }
     public void lvl3 () {
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_2");
         Time.timeScale = 1f;
+        PlayerPrefs.DeleteAll();
     }
     public void lvl4 () {
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_3");
         Time.timeScale = 1f;
+        PlayerPrefs.DeleteAll();
     }
     public void lvl5 () {
         gm.lastCheckPoint = new Vector3(-270, -143, 0);
         SceneManager.LoadScene("Level_4");
         Time.timeScale = 1f;
+        PlayerPrefs.DeleteAll();
     }
     public void infinitlvl() {
         gm.lastCheckPoint = new Vector3(0, 24, 0);
         SceneManager.LoadScene("Procedural");
         Time.timeScale = 1f;
+        PlayerPrefs.DeleteAll();
+
     }
 
 }
