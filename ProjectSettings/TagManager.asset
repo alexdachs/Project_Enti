@@ -30,6 +30,8 @@ TagManager:
   - tutoslide
   - tutomovement
   - tutogravity
+  - tutogravity1
+  - tutodashreset
   layers:
   - Default
   - TransparentFX

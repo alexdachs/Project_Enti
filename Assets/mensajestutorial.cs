@@ -7,17 +7,15 @@ public class mensajestutorial : MonoBehaviour
 {
     //mensajes tutorial
     public GameObject tutojump;
-    bool tutojumpbool;
     public GameObject tutodash;
-    bool tutodashbool;
     public GameObject tutoslide;
-    bool tutoslidebool;
     public GameObject tutokill;
-    bool tutokillbool;
     public GameObject tutomovement;
-    bool tutomovementbool;
     public GameObject tutogravity;
-    bool tutogravitybool;
+    public GameObject tutogravity1;
+    public GameObject tutodashreset;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,10 +32,17 @@ public class mensajestutorial : MonoBehaviour
             Time.timeScale = 1f;
 
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            tutomovement.SetActive(false);
+            Time.timeScale = 1f;
+
+        }
         if (Input.GetKeyDown(KeyCode.D))
         {
             tutodash.SetActive(false);
             tutokill.SetActive(false);
+            tutodashreset.SetActive(false);
             Time.timeScale = 1f;
 
         }  
@@ -50,6 +55,7 @@ public class mensajestutorial : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             tutoslide.SetActive(false);
+            tutogravity1.SetActive(false);
             Time.timeScale = 1f;
 
         }      
@@ -58,32 +64,34 @@ public class mensajestutorial : MonoBehaviour
     {
         if(col.gameObject.tag == "tutomovement") {
             tutomovement.SetActive(true);
-            tutomovementbool = true;
             Time.timeScale = 0f;
         }
         if(col.gameObject.tag == "tutojump") {
             tutojump.SetActive(true);
-            tutojumpbool = true;
             Time.timeScale = 0f;
         }
         if(col.gameObject.tag == "tutodash") {
             tutodash.SetActive(true);
-            tutodashbool = true;
             Time.timeScale = 0f;
         }
         if(col.gameObject.tag == "tutokill") {
             tutokill.SetActive(true);
-            tutokillbool = true;
             Time.timeScale = 0f;
         }
         if(col.gameObject.tag == "tutoslide") {
             tutoslide.SetActive(true);
-            tutoslidebool = true;
             Time.timeScale = 0f;
         }
         if(col.gameObject.tag == "tutogravity") {
             tutogravity.SetActive(true);
-            tutogravitybool = true;
+            Time.timeScale = 0f;
+        }
+        if(col.gameObject.tag == "tutogravity1") {
+            tutogravity1.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        if(col.gameObject.tag == "tutodashreset") {
+            tutodashreset.SetActive(true);
             Time.timeScale = 0f;
         }
     }
