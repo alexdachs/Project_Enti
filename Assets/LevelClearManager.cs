@@ -9,6 +9,7 @@ public class LevelClearManager : MonoBehaviour
     [SerializeField] Text playerTimeText;
     [SerializeField] Text minTimeText;
     [SerializeField] GameObject collectableText;
+    [SerializeField] GameObject collectableTextNo;
     public void ShowLevelClear (int stars, float playertime, float mintime, bool collectable) {
             int secondsf = (int)(playertime % 60);
             int minutesf = (int)((playertime / 60) % 60);
@@ -20,6 +21,7 @@ public class LevelClearManager : MonoBehaviour
             minTimeText.text = hoursf.ToString("00 ") + ":" + minutesf.ToString(" 00 ") + ":" + secondsf.ToString(" 00 ");
             if (collectable) {
                 collectableText.SetActive(true);
+                collectableTextNo.SetActive(false);
             }
             levelClearAnimator.SetInteger("stars", stars);
     }
