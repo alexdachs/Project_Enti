@@ -489,7 +489,7 @@ public class character : MonoBehaviour
                 levelClearManager.ShowLevelClear(3, timerfinish, timerminimum, collectable > 0);
 
             }
-            else if(timerfinish <= timerminimum) {
+            else if(timerfinish <= timerminimum || collectable > 0) {
                 levelClearManager.ShowLevelClear(2, timerfinish, timerminimum, collectable > 0);
             }
             else {

@@ -334,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 763990503}
     - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: timerminimum
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1862283505, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: m_RootOrder
