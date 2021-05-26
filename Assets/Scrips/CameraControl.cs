@@ -11,6 +11,7 @@ public class CameraControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
        audioC =  gameCamera.GetComponent<AudioSource>();
        audioC.Play(); 
     }
@@ -18,13 +19,17 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player != null)
+        if (player.GetComponent<character>().endLevel == false)
         {
-            gameCamera.transform.position = new Vector3(
-                player.transform.position.x +200,
-                gameCamera.transform.position.y,
-                gameCamera.transform.position.z);
+            if (player != null)
+            {
+                gameCamera.transform.position = new Vector3(
+                    player.transform.position.x + 200,
+                    gameCamera.transform.position.y,
+                    gameCamera.transform.position.z);
+            }
         }
-
     }
+
+
 }
