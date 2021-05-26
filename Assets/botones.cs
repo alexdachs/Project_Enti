@@ -68,6 +68,13 @@ public class botones : MonoBehaviour
         Time.timeScale = 1f;
         PlayerPrefs.DeleteAll();
     }
+    public void lvl6 () {
+        gm.lastCheckPoint = new Vector3(-270, -143, 0);
+        SceneManager.LoadScene("Level_5");
+        Time.timeScale = 1f;
+        PlayerPrefs.DeleteAll();
+    }
+
     public void infinitlvl() {
         gm.lastCheckPoint = new Vector3(0, 24, 0);
         SceneManager.LoadScene("Procedural");
