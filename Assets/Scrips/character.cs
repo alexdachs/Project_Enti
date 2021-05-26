@@ -43,7 +43,7 @@ public class character : MonoBehaviour
     private float currentBoostTime;
 
     private float deadTime;
-    private bool endLevel = false;
+    public bool endLevel = false;
 
     public bool changeGravity = false;
     //private float gravityForce = 40.0f;
@@ -279,7 +279,7 @@ public class character : MonoBehaviour
     private void FixedUpdate()
     {
         float delta = Time.deltaTime * 65;
-        if (!isDashing && !endLevel && !isDead)
+        if (!isDashing && !isDead)
         {
             player.velocity = new Vector2(speed * delta, player.velocity.y); // Movimiento constante
             anim.SetBool("move", true);
