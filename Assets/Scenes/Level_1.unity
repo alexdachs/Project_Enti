@@ -15016,6 +15016,10 @@ PrefabInstance:
       propertyPath: starcompletef
       value: 
       objectReference: {fileID: 523505890}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: timerminimum
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 5343657126591580284, guid: 0ccd77512a376594fa857640c7cc40f7,
         type: 3}
       propertyPath: m_LocalPosition.x
