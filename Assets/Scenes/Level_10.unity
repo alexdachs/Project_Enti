@@ -42125,6 +42125,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1754369245136857908, guid: eef9db967a42a1146a643402bbe44f14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Victory
+      objectReference: {fileID: 0}
     - target: {fileID: 1758454922675641393, guid: eef9db967a42a1146a643402bbe44f14,
         type: 3}
       propertyPath: m_Name
@@ -42184,6 +42189,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600607454278951106, guid: eef9db967a42a1146a643402bbe44f14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: lvl11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169124502710873275, guid: eef9db967a42a1146a643402bbe44f14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: lvl11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eef9db967a42a1146a643402bbe44f14, type: 3}
