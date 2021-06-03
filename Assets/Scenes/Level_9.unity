@@ -336,9 +336,18 @@ PrefabInstance:
       propertyPath: timerminimum
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: endLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1862283505, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646856002758761347, guid: 0ccd77512a376594fa857640c7cc40f7,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5343657126591580284, guid: 0ccd77512a376594fa857640c7cc40f7,
         type: 3}
@@ -1829,6 +1838,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6336589288045804712, guid: eef9db967a42a1146a643402bbe44f14,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6336589288045804712, guid: eef9db967a42a1146a643402bbe44f14,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 197236889, guid: eef9db967a42a1146a643402bbe44f14, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -11209,7 +11228,7 @@ PrefabInstance:
     - target: {fileID: 8932129344156170290, guid: f0a2ec8da2f066f4eb0e6ebe2130b83d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4216.3
+      value: 4091
       objectReference: {fileID: 0}
     - target: {fileID: 8932129344156170290, guid: f0a2ec8da2f066f4eb0e6ebe2130b83d,
         type: 3}
