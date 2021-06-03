@@ -23,6 +23,7 @@ public class character : MonoBehaviour
     private bool goingLeft = false;
     private bool isDead = false;
 
+    private float coinTimer;
     private const float stop = 0f;
     private const float move = 300.0f;
     public float speed = 300.0f;
@@ -184,7 +185,12 @@ public class character : MonoBehaviour
 
         if (coin == true)
         {
-            coin = false;
+            coinTimer += Time.deltaTime;
+            if (coinTimer >= 0.01f)
+            {
+                coin = false;
+            }
+
         }
         if (puerta)
         {
