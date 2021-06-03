@@ -96,6 +96,8 @@ public class character : MonoBehaviour
     float hoursm;
     public GameObject collectableyes;
     public GameObject collectableno;
+
+    [SerializeField] Animator door;
     //public Text deathcount;
     //int deaths;
     [SerializeField] LevelClearManager levelClearManager;
@@ -438,7 +440,6 @@ public class character : MonoBehaviour
             isJumping = true;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "projectile")
@@ -449,6 +450,13 @@ public class character : MonoBehaviour
                 anim.SetBool("death", true);
                 isDead = true;
             }
+        }
+        if(col.gameObject.tag == "door") {
+            speed = 0;
+            door.SetBool("DoorOpen", true);
+            anim.SetBool("move",false);
+            anim.SetBool("dash",false);
+            anim.SetBool("jump",false);
         }
 
         //COLECCIONABLE
