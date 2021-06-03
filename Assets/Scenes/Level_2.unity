@@ -1616,7 +1616,7 @@ PrefabInstance:
     - target: {fileID: 2229701205363887434, guid: 060b6a855136451498d2c0b7c3b8b971,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 13329
       objectReference: {fileID: 0}
     - target: {fileID: 2229701205363887434, guid: 060b6a855136451498d2c0b7c3b8b971,
         type: 3}
@@ -2643,6 +2643,14 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 753494934}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: stopwatch
+      value: 
+      objectReference: {fileID: 1255187503}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: levelcomplet
+      value: 
+      objectReference: {fileID: 1737066814}
     - target: {fileID: 5343657126591580284, guid: 0ccd77512a376594fa857640c7cc40f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16939,6 +16947,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e113dbee38fffb945a149560c36b537e, type: 3}
+--- !u!1 &1255187503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4032450705570095692, guid: eef9db967a42a1146a643402bbe44f14,
+    type: 3}
+  m_PrefabInstance: {fileID: 1943620134}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1272113941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17723,6 +17737,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e113dbee38fffb945a149560c36b537e, type: 3}
+--- !u!1 &1737066814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4032450705674218649, guid: eef9db967a42a1146a643402bbe44f14,
+    type: 3}
+  m_PrefabInstance: {fileID: 1943620134}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1830594560
 PrefabInstance:
   m_ObjectHideFlags: 0
