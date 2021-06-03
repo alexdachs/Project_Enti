@@ -32,6 +32,7 @@ TagManager:
   - tutogravity
   - tutogravity1
   - tutodashreset
+  - door
   layers:
   - Default
   - TransparentFX
