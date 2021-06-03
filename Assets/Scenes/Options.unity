@@ -1314,8 +1314,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 921149927}
   m_HandleRect: {fileID: 250002571}
   m_Direction: 0
-  m_MinValue: -100
-  m_MaxValue: 100
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -2843,12 +2843,12 @@ PrefabInstance:
     - target: {fileID: 6470249825960686477, guid: bf59e9dcd247455408a64d375b8c8e03,
         type: 3}
       propertyPath: m_MaxValue
-      value: 100
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6470249825960686477, guid: bf59e9dcd247455408a64d375b8c8e03,
         type: 3}
       propertyPath: m_MinValue
-      value: -100
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 6470249825960686477, guid: bf59e9dcd247455408a64d375b8c8e03,
         type: 3}
