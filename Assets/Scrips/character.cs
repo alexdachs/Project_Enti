@@ -14,6 +14,8 @@ public class character : MonoBehaviour
     public GameObject lvlManager;
     private GameMaster gm;
 
+    private bool puerta = false;
+    private float puertaTime;
     public float dashDistance = 200.0f;
     public bool isDashing;
     public bool isAttacking;
@@ -183,6 +185,14 @@ public class character : MonoBehaviour
         if (coin == true)
         {
             coin = false;
+        }
+        if (puerta)
+        {
+            puertaTime += Time.deltaTime;
+            if (puertaTime >= 3f)
+            {
+                GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
         //Player
         if (!ground && !endLevel && !isDead)
@@ -455,6 +465,10 @@ public class character : MonoBehaviour
                 anim.SetBool("death", true);
                 isDead = true;
             }
+        }
+        if (col.gameObject.tag == "door")
+        {
+            puerta = true;
         }
         if(col.gameObject.tag == "door") {
             speed = 0;
