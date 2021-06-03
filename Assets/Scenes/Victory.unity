@@ -703,9 +703,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Thanks For play the beta\n\nWe hope you liked it, soon there will be a
-    new version with more levels and bug fixes. You can keep playing to try to beat
-    your record in infinite mode \n\n"
+  m_Text: 'Thanks For play
+
+
+    We hope you liked it, soon there will be a new version
+    with more levels. You can keep playing to try to beat your record in the levels
+
+
+'
 --- !u!222 &1894950088
 CanvasRenderer:
   m_ObjectHideFlags: 0
