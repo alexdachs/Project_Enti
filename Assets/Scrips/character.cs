@@ -56,6 +56,7 @@ public class character : MonoBehaviour
     private float jumpCoolDown;
 
     public float collectable;
+    public bool coin = false;
     private bool isinmortal = false;
 
     //Animaciones
@@ -179,6 +180,10 @@ public class character : MonoBehaviour
             }
         }
 
+        if (coin == true)
+        {
+            coin = false;
+        }
         //Player
         if (!ground && !endLevel && !isDead)
         {
@@ -463,6 +468,7 @@ public class character : MonoBehaviour
         if (col.gameObject.tag == "collectable")
         {
             collectable = 1;
+            coin = true;
             Destroy(col.gameObject);
         }
         if (col.gameObject.tag == "checkpoint") {
