@@ -1177,6 +1177,10 @@ PrefabInstance:
       propertyPath: timerminimum
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 834466633}
     - target: {fileID: 5343657126591580284, guid: 0ccd77512a376594fa857640c7cc40f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1308,6 +1312,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 060b6a855136451498d2c0b7c3b8b971, type: 3}
+--- !u!95 &834466633 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2229701205363887435, guid: 060b6a855136451498d2c0b7c3b8b971,
+    type: 3}
+  m_PrefabInstance: {fileID: 834466632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &884610315
 PrefabInstance:
   m_ObjectHideFlags: 0

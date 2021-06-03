@@ -39064,7 +39064,7 @@ PrefabInstance:
     - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: levelcomplet
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1764550707}
     - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: starcomplete
       value: 
@@ -39080,7 +39080,7 @@ PrefabInstance:
     - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: stopwatch
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1764550706}
     - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: timefinish
       value: 
@@ -42279,6 +42279,18 @@ PrefabInstance:
 --- !u!20 &1764550705 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1758454922675641399, guid: eef9db967a42a1146a643402bbe44f14,
+    type: 3}
+  m_PrefabInstance: {fileID: 1764550704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1764550706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4032450705570095692, guid: eef9db967a42a1146a643402bbe44f14,
+    type: 3}
+  m_PrefabInstance: {fileID: 1764550704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1764550707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4032450705674218649, guid: eef9db967a42a1146a643402bbe44f14,
     type: 3}
   m_PrefabInstance: {fileID: 1764550704}
   m_PrefabAsset: {fileID: 0}

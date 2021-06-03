@@ -274,6 +274,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eef9db967a42a1146a643402bbe44f14, type: 3}
+--- !u!1 &155347860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4032450705570095692, guid: eef9db967a42a1146a643402bbe44f14,
+    type: 3}
+  m_PrefabInstance: {fileID: 155347859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &155347861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4032450705674218649, guid: eef9db967a42a1146a643402bbe44f14,
+    type: 3}
+  m_PrefabInstance: {fileID: 155347859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &164263694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10780,6 +10792,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 060b6a855136451498d2c0b7c3b8b971, type: 3}
+--- !u!95 &676229378 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2229701205363887435, guid: 060b6a855136451498d2c0b7c3b8b971,
+    type: 3}
+  m_PrefabInstance: {fileID: 676229377}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &749547344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31601,6 +31619,18 @@ PrefabInstance:
       propertyPath: stopWatchText
       value: 
       objectReference: {fileID: 938601366}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: levelcomplet
+      value: 
+      objectReference: {fileID: 155347861}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: stopwatch
+      value: 
+      objectReference: {fileID: 155347860}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 676229378}
     - target: {fileID: 5343657126591580284, guid: 0ccd77512a376594fa857640c7cc40f7,
         type: 3}
       propertyPath: m_LocalPosition.x
