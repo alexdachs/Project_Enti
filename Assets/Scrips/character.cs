@@ -78,11 +78,11 @@ public class character : MonoBehaviour
 
     //Level complete
     public GameObject levelcomplet;
-    public GameObject starcomplete;
-    public GameObject startime;
-    public GameObject starcompletef;
-    public GameObject startimef;
-    public GameObject starcollect;
+    //public GameObject starcomplete;
+    // public GameObject startime;
+    // public GameObject starcompletef;
+    // public GameObject startimef;
+    // public GameObject starcollect;
     public GameObject stopwatch;
     public Text timefinish;
     float timerfinish;
@@ -94,8 +94,8 @@ public class character : MonoBehaviour
     float secondsm;
     float minutesm;
     float hoursm;
-    public GameObject collectableyes;
-    public GameObject collectableno;
+    //public GameObject collectableyes;
+    //public GameObject collectableno;
 
     [SerializeField] Animator door;
     //public Text deathcount;
@@ -474,9 +474,8 @@ public class character : MonoBehaviour
             endLevel = true;
             PlayerPrefs.SetFloat(filetimer, timer);
             levelcomplet.SetActive(true);
-            starcompletef.SetActive(false);
             stopwatch.SetActive(false);
-            starcomplete.SetActive(true);
+            //starcomplete.SetActive(true);
             //coger tiempo y mostrar/calcular
             timerfinish = PlayerPrefs.GetFloat(filetimer, 0);
             /* secondsf = (int)(timerfinish % 60);

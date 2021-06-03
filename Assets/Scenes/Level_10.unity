@@ -39060,7 +39060,7 @@ PrefabInstance:
     - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: stopWatchText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2013149603}
     - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
       propertyPath: levelcomplet
       value: 
@@ -39109,6 +39109,10 @@ PrefabInstance:
       propertyPath: speed
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 1651570766, guid: 0ccd77512a376594fa857640c7cc40f7, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 958212998}
     - target: {fileID: 5343657126591580284, guid: 0ccd77512a376594fa857640c7cc40f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41454,6 +41458,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e113dbee38fffb945a149560c36b537e, type: 3}
+--- !u!95 &958212998 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2229701205363887435, guid: 060b6a855136451498d2c0b7c3b8b971,
+    type: 3}
+  m_PrefabInstance: {fileID: 1097873761}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &969836497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62851,6 +62861,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &2013149603 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4032450705878381862, guid: eef9db967a42a1146a643402bbe44f14,
+    type: 3}
+  m_PrefabInstance: {fileID: 1764550704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2023274404
 PrefabInstance:
   m_ObjectHideFlags: 0
